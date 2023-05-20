@@ -11,6 +11,9 @@
     outline: none;
 }
 
+body {
+    padding-bottom: 2rem;
+}
 .logo img {
     margin-right: 1rem;
 }
