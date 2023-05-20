@@ -5,14 +5,12 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
-    list-style: none;
+    /* list-style: none; */
     text-decoration: none;
     border: none;
     outline: none;
 }
-html {
-    overflow-x: auto;
-}
+
 .logo img {
     margin-right: 1rem;
 }
@@ -44,6 +42,9 @@ gap: 3rem;
     display: flex;
     gap: 2.5rem;
     align-items: center;
+}
+.navbar-list-container .navbar-list li {
+    list-style: none;
 }
 .navbar-list-container .navbar-list li a:hover{
     color: #F3628E;
@@ -111,8 +112,6 @@ gap: 3rem;
 .toggle {
     display: none;
 }
-
-/* =============================ABOUT US============================= */
 .about {
     padding-bottom: 3rem;
 }
@@ -130,103 +129,47 @@ gap: 3rem;
     color: #fff;
     font-size: 3rem;
 }
-.about-details {
-    width: 80vw;
-    margin: 2rem auto;
-}
-.about-details p {
-    font-size: 1.1rem;
-    text-align: justify;
-}
-
-.mission-vision-container {
-    margin: 2rem 0; 
+.programmes {
+    /* display: flex;
+    justify-content: center;align-items: center; */
+    margin: 3.5rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
     flex-wrap: wrap;
-    
+    gap: 1.2rem;
 }
-.mission-vision-container .mission-vision-img{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.mission-vision-container .mission-vision-img .mission-vision-img-1 img{
-   width: 15rem;
-}
-.mission-vision-container .mission-vision {
-    display: flex;
-    flex-flow: column;
-    gap: 10rem;
+.programmes .programmes-details {
     width: 30rem;
 }
-
-.mission-vision-container .mission-vision .mission .title img,
-.mission-vision-container .mission-vision .vision .title img{
-   width: 7rem;
-   margin-left: 2rem;
-}
-
-.what-we-do {
-    margin: 3rem 0;
-}
-.what-we-do .title,
-.team-container .title {
-    margin: 0 auto;
-    width: 350px; height: 66px; 
-    display: flex; flex-direction: column; 
-    align-items: center; justify-content: center;
-}
-.reproduction-education {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    gap: 1rem;
-}
-.reproduction-education .reproduction-education-details {
-    width: 17rem;
-}
-.reproduction-education .reproduction-education-details .reproduction-education-details-title{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-.reproduction-education .reproduction-education-details .reproduction-education-details-title img{
-    width: 2rem;
-}
-.reproduction-education .reproduction-education-details .reproduction-education-details-text p{
-   font-size: .7rem;
-   margin-top: 1rem;
-   text-align: left;
-   width: 15rem;
-}
-.team-container {
-  width: 80vw;
-  margin: 0 auto;
-}
-.team-members {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    gap: 1rem;
- }
- .team-members .team-member {
-    width: 14rem;
- }
- .team-members .team-member .team-member-img img {
+.programmes .programmes-details img {
     width: 100%;
-    height: 14rem;
- }
+}
+.programmes .programmes-details .programmes-details-info {
+    margin-top: 1rem;
+}
+.programmes .programmes-details .programmes-details-info p {
+    font-size: .9rem;
+    padding-top: 0.4rem;
+}
+.programmes .programmes-details .programmes-details-info .btn, 
+.girls-education-programmes .btn {
+    background-color: #F3628E;
+    border: 1px solid #F3628E;
+    padding: .5rem 1.2rem;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.programmes .programmes-details .programmes-details-info .btn a,
+.girls-education-programmes .btn a{
+   color: #fff;
+}
 
- .contact-container {
+
+
+
+
+.contact-container {
     width: 80vw;
     margin: 3rem auto;
  }
@@ -293,7 +236,17 @@ color: #fff;
    padding-bottom: 1rem;
    font-size: 15px;
  }
-@media (max-width:1000px) {
+.girls-education-programmes {
+    width: 70vw;
+    margin: 0 auto;
+}
+.girls-education-programmes h1 {
+   margin-bottom: 1.5rem;
+}
+.girls-education-programmes p ul  {
+   width: 60vw;
+}
+ @media (max-width:1000px) {
     .logo img {
         font-size: 2.3;
     }
@@ -342,12 +295,11 @@ color: #fff;
     .about-img h1 {
         font-size: 2.7rem;
     }
-
-    .team-container {
-        padding: 2rem 0;
+    .programmes .programmes-details {
+        width: 27rem;
     }
-  
 }
+
 @media (max-width:768px) {
     .logo img {
         width: 2.5rem;
@@ -367,23 +319,6 @@ color: #fff;
     .about-img h1 {
         font-size: 2.5rem;
     }
-    .mission-vision-container .mission-vision {
-        width: 21rem;
-    }
-    .mission-vision-container .mission-vision p {
-       width: 100%;
-    }
-    .what-we-do .title,
-.team-container .title {
-    margin: 0 auto;
-    width: 340px; height: 66px; 
-    display: flex; flex-direction: column; 
-    align-items: center; justify-content: center;
-}
-.what-we-do .title img,
-.team-container .title img {
-    width: 10rem;
-}
 /* .contact-numbers-container p {
     font-size: 13px;
 } */
@@ -398,98 +333,71 @@ color: #fff;
  .footer-1 .logo p {
         font-size: 13px;
       }
+      .programmes .programmes-details {
+        width: 23rem;
+    }
 }
 @media (max-width:600px) {
-   .navbar {
-    width: 80vw;
-   }
-    .logo img {
-        width: 2.4rem;
-    }
-    .navbar-list-container .nav-btns .donate-btn, 
-    .navbar-list-container .nav-btns .contact-btn  {
-        width: 80.10px;
-         height: 24.10px;  padding: 7px 9px;
-    }
-    .navbar-list-container .nav-btns .contact-btn a,
-    .navbar-list-container .nav-btns .donate-btn a{
-        font-size: .8rem;
-    }
-    .about-img h1 {
-        font-size: 2.0rem;
-    }
-    .mission-vision-container .mission-vision {
-        width: 19rem;
-    }
-    .mission-vision-container .mission-vision p {
-       width: 100%;
-    }
-    .what-we-do .title,
-.team-container .title {
-    margin: 0 auto;
-    width: 320px; height: 66px; 
-    display: flex; flex-direction: column; 
-    align-items: center; justify-content: center;
-}
-.what-we-do .title img,
-.team-container .title img {
-    width: 8rem;
-}
-}
-@media (max-width:400px) {
     .navbar {
-        width: 85vw;
-        /* background-color: #F3628E; */
-       }
-    .logo img {
-        width: 2.2rem;
+     width: 80vw;
     }
-    .navbar-list-container .nav-btns .donate-btn, 
-    .navbar-list-container .nav-btns .contact-btn  {
-        width: 73.10px;
-         height: 21.10px;  padding: 6px 8px;
-         /* margin-right: 2%; */
-    }
-    .navbar-list-container .nav-btns .contact-btn a,
-    .navbar-list-container .nav-btns .donate-btn a{
-        font-size: .7rem;
-    }
-    .about-img h1 {
-        font-size: 1.5rem;
-    }
-    .mission-vision-container .mission-vision {
-        width: 17rem;
-    }
-    .mission-vision-container .mission-vision p {
-       width: 100%;
-    }
-    .what-we-do .title,
-.team-container .title {
-    margin: 0 auto;
-    width: 300px; height: 66px; 
-    display: flex; flex-direction: column; 
-    align-items: center; justify-content: center;
-}
+     .logo img {
+         width: 2.4rem;
+     }
+     .navbar-list-container .nav-btns .donate-btn, 
+     .navbar-list-container .nav-btns .contact-btn  {
+         width: 80.10px;
+          height: 24.10px;  padding: 7px 9px;
+     }
+     .navbar-list-container .nav-btns .contact-btn a,
+     .navbar-list-container .nav-btns .donate-btn a{
+         font-size: .8rem;
+     }
+     .about-img h1 {
+         font-size: 2.0rem;
+     }
     
-.what-we-do .title img,
-.team-container .title img {
-    width: 7rem;
-}
-}
-@media (max-width:300px) {
-    .logo img {
-        width: 2.0rem;
+ }
+ @media (max-width:400px) {
+     .navbar {
+         width: 85vw;
+         /* background-color: #F3628E; */
+        }
+     .logo img {
+         width: 2.2rem;
+     }
+     .navbar-list-container .nav-btns .donate-btn, 
+     .navbar-list-container .nav-btns .contact-btn  {
+         width: 73.10px;
+          height: 21.10px;  padding: 6px 8px;
+          /* margin-right: 2%; */
+     }
+     .navbar-list-container .nav-btns .contact-btn a,
+     .navbar-list-container .nav-btns .donate-btn a{
+         font-size: .7rem;
+     }
+     .about-img h1 {
+         font-size: 1.5rem;
+     }
+     .programmes .programmes-details {
+        width: 18rem;
     }
-    .navbar-list-container .nav-btns .donate-btn, 
-    .navbar-list-container .nav-btns .contact-btn  {
-        width: 68.10px;
-         height: 19.10px;  padding: 6px 8px;
+     
+ }
+ @media (max-width:300px) {
+     .logo img {
+         width: 2.0rem;
+     }
+     .navbar-list-container .nav-btns .donate-btn, 
+     .navbar-list-container .nav-btns .contact-btn  {
+         width: 68.10px;
+          height: 19.10px;  padding: 6px 8px;
+     }
+     .navbar-list-container .nav-btns .contact-btn a,
+     .navbar-list-container .nav-btns .donate-btn a{
+         font-size: .7rem;
+     }
+     .programmes .programmes-details {
+        width: 15rem;
     }
-    .navbar-list-container .nav-btns .contact-btn a,
-    .navbar-list-container .nav-btns .donate-btn a{
-        font-size: .7rem;
-    }
-   .contact-numbers p {
-font-size: .7rem;
-   }
-}
+ }
