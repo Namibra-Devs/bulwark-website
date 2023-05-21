@@ -115,11 +115,8 @@ gap: 3rem;
 .toggle {
     display: none;
 }
-.about {
-    padding-bottom: 3rem;
-}
 .about-img {
-    background: url(../images/programe-2.png);
+    background: url(../images/Resources.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -132,46 +129,47 @@ gap: 3rem;
     color: #fff;
     font-size: 3rem;
 }
-.programmes {
-    /* display: flex;
-    justify-content: center;align-items: center; */
-    margin: 3.5rem 0;
+.event-text {
+    width: 65vw;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+.event-text p {
+   text-align: justify; 
+}
+.event-text p span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.category {
+    margin: 3rem 0;
+}
+.category h1{
+   margin: 0 0 2rem 17rem;
+}
+.category .category-details {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 1.2rem;
+    gap: 1rem;
+    width: 80vw;
+    margin: 0 auto;
 }
-.programmes .programmes-details {
-    width: 30rem;
+
+.category .category-details .category-details-info {
+    width: 25rem;
 }
-.programmes .programmes-details img {
+.category .category-details .category-details-info img{
     width: 100%;
 }
-.programmes .programmes-details .programmes-details-info {
-    margin-top: 1rem;
+.category .category-details .category-details-info h3 {
+  margin: 1rem 0 1.8rem 0;
+  font-size: 1rem;
 }
-.programmes .programmes-details .programmes-details-info p {
-    font-size: .9rem;
-    padding-top: 0.4rem;
+.category .category-details .category-details-info p {
+  font-size: .8rem;
 }
-.programmes .programmes-details .programmes-details-info .btn, 
-.girls-education-programmes .btn {
-    background-color: #F3628E;
-    border: 1px solid #F3628E;
-    padding: .5rem 1.2rem;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-.programmes .programmes-details .programmes-details-info .btn a,
-.girls-education-programmes .btn a{
-   color: #fff;
-}
-
-
-
-
-
 .contact-container {
     width: 80vw;
     margin: 3rem auto;
@@ -239,16 +237,7 @@ color: #fff;
    padding-bottom: 1rem;
    font-size: 15px;
  }
-.girls-education-programmes {
-    width: 70vw;
-    margin: 0 auto;
-}
-.girls-education-programmes h1 {
-   margin-bottom: 1.5rem;
-}
-.girls-education-programmes p ul  {
-   width: 60vw;
-}
+
  @media (max-width:1000px) {
     .logo img {
         font-size: 2.3;
@@ -298,9 +287,13 @@ color: #fff;
     .about-img h1 {
         font-size: 2.7rem;
     }
-    .programmes .programmes-details {
-        width: 27rem;
+    .category .category-details .category-details-info {
+        width: 23rem;
     }
+    .category .category-details .category-details-info img{
+        width: 100%;
+    }
+    
 }
 
 @media (max-width:768px) {
@@ -325,6 +318,12 @@ color: #fff;
 /* .contact-numbers-container p {
     font-size: 13px;
 } */
+.category .category-details .category-details-info {
+    width: 22rem;
+}
+.category .category-details .category-details-info img{
+    width: 100%;
+}
 .contact-img .contact-img-btn .btn {
     padding: .5rem 1.3rem;
     border-radius: 5px;
@@ -359,48 +358,62 @@ color: #fff;
      .about-img h1 {
          font-size: 2.0rem;
      }
-    
+     .category .category-details .category-details-info {
+        width: 20rem;
+    }
+    .category .category-details .category-details-info img{
+        width: 100%;
+    }
  }
  @media (max-width:400px) {
-     .navbar {
-         width: 85vw;
-         /* background-color: #F3628E; */
-        }
-     .logo img {
-         width: 2.2rem;
-     }
-     .navbar-list-container .nav-btns .donate-btn, 
-     .navbar-list-container .nav-btns .contact-btn  {
-         width: 73.10px;
-          height: 21.10px;  padding: 6px 8px;
-          /* margin-right: 2%; */
-     }
-     .navbar-list-container .nav-btns .contact-btn a,
-     .navbar-list-container .nav-btns .donate-btn a{
-         font-size: .7rem;
-     }
-     .about-img h1 {
-         font-size: 1.5rem;
-     }
-     .programmes .programmes-details {
+    .navbar {
+        width: 85vw;
+        /* background-color: #F3628E; */
+       }
+    .logo img {
+        width: 2.2rem;
+    }
+    .navbar-list-container .nav-btns .donate-btn, 
+    .navbar-list-container .nav-btns .contact-btn  {
+        width: 73.10px;
+         height: 21.10px;  padding: 6px 8px;
+         /* margin-right: 2%; */
+    }
+    .navbar-list-container .nav-btns .contact-btn a,
+    .navbar-list-container .nav-btns .donate-btn a{
+        font-size: .7rem;
+    }
+    .about-img h1 {
+        font-size: 1.5rem;
+    }
+   
+    .category .category-details .category-details-info {
         width: 18rem;
     }
-     
- }
- @media (max-width:300px) {
-     .logo img {
-         width: 2.0rem;
-     }
-     .navbar-list-container .nav-btns .donate-btn, 
-     .navbar-list-container .nav-btns .contact-btn  {
-         width: 68.10px;
-          height: 19.10px;  padding: 6px 8px;
-     }
-     .navbar-list-container .nav-btns .contact-btn a,
-     .navbar-list-container .nav-btns .donate-btn a{
-         font-size: .7rem;
-     }
-     .programmes .programmes-details {
-        width: 15rem;
+    .category .category-details .category-details-info img{
+        width: 100%;
     }
- }
+}
+@media (max-width:300px) {
+    .logo img {
+        width: 2.0rem;
+    }
+    .navbar-list-container .nav-btns .donate-btn, 
+    .navbar-list-container .nav-btns .contact-btn  {
+        width: 68.10px;
+         height: 19.10px;  padding: 6px 8px;
+    }
+    .navbar-list-container .nav-btns .contact-btn a,
+    .navbar-list-container .nav-btns .donate-btn a{
+        font-size: .7rem;
+    }
+    .programmes .programmes-details {
+       width: 15rem;
+   }
+   .category .category-details .category-details-info {
+    width: 15rem;
+}
+.category .category-details .category-details-info img{
+    width: 100%;
+}
+}
