@@ -87,28 +87,11 @@ gap: 3rem;
     gap: .4rem;
 }
 .navbar-list-container .nav-btns .donate-btn {
-    position: relative;
     width: 115.10px;
      height: 36.10px;  padding: 13px 17px;
      background-color: rgba(243, 98, 142, 1);
      border-radius:5px;
      display: flex;  align-items: center; justify-content: center;
-     z-index: 1;
-     overflow: hidden;
-     cursor: pointer;
-}
-.navbar-list-container .nav-btns .donate-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;left: 0;
-    width: 00%;height: 100%;
-    background-color: rgb(240, 51, 83);
-    border-radius:5px;
-    z-index: -1;
-    transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1);
-}
-.navbar-list-container .nav-btns .donate-btn:hover::before {
-    width: 100%;
 }
 .navbar-list-container .nav-btns .donate-btn a {
     color: aliceblue;
@@ -116,126 +99,131 @@ gap: 3rem;
 }
 
 .navbar-list-container .nav-btns .contact-btn {
-    position: relative;
     background-color: transparent;
     width: 115.10px; 
     height: 36.10px; padding: 13px 17px;
     border-radius: 5px; 
-    border: 1px solid rgba(243, 98, 142, 1); 
+    border-style: solid; 
+    border-width: 1px;
+     border-style: solid; 
+     border-color: rgba(243, 98, 142, 1);
     display: flex;  align-items: center; justify-content: center;
-    z-index: 1;
-    overflow: hidden;
-    cursor: pointer;
-}
-.navbar-list-container .nav-btns .contact-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;left: 0;
-    width: 00%;height: 100%;
-    border-radius: 5px; 
-    background-color: rgba(243, 98, 142, 1);
-    border-radius:5px;
-    z-index: -1;
-    transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1);
-}
-.navbar-list-container .nav-btns .contact-btn:hover::before {
-    width: 100%;
 }
 .navbar-list-container .nav-btns .contact-btn a {
     font-size: 1rem;
-    color: black;
 }
 .toggle {
     display: none;
 }
-.about {
-    padding-bottom: 3rem;
-}
-.about-img {
-    background: url(../images/programe-2.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 75vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.about-img h1 {
-    color: #fff;
-    font-size: 3rem;
-}
-.programmes {
-    /* display: flex;
-    justify-content: center;align-items: center; */
-    margin: 3.5rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.2rem;
-}
-.programmes .programmes-details {
-    width: 30rem;
-}
-.programmes .programmes-details img {
-    width: 100%;
-}
-.programmes .programmes-details .programmes-details-info {
-    margin-top: 1rem;
-}
-.programmes .programmes-details .programmes-details-info p {
-    font-size: .9rem;
-    padding-top: 0.4rem;
-}
-.programmes .programmes-details .programmes-details-info .btn, 
-.girls-education-programmes .btn {
-    background-color: #F3628E;
-    border: 1px solid #F3628E;
-    padding: .5rem 1.2rem;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-.programmes .programmes-details .programmes-details-info .btn a,
-.girls-education-programmes .btn a{
-   color: #fff;
-}
-
-.contact-container {
-    width: 80vw;
-    margin: 3rem auto;
- }
- .contact-img {
+.form-container {
     margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    background: url(../images/contact-frame.jpg);
-    height: 18vw;
-    min-height: 10rem;
     width: 70vw;
- }
- .contact-img .contact-img-text h1 {
-text-align: center;
-color: #fff;
-padding-bottom: 2rem;
- }
- .contact-img .contact-img-text p {
-text-align: center;
-color: #fff;
- }
- .contact-img .contact-img-btn .btn {
-background-color: transparent;
-border: 1px solid #fff;
+    padding-top: 2rem;
+    /* position: relative; */
+    padding-bottom: 2rem;
+}
+.form-container .form-details {
+   background-color: #eba3b3a4;
+   margin: 0 auto;
+   width: 100%;
+   padding: 2.5rem 0;
+}
+.form-container .form-details h2{
+   padding-top: 1rem;
+   color: #F3628E;
+} 
+.form-container .form-details p {
+   text-align: center;
+   padding-top: 1rem;
+}
+.form-container .form-details form {
+width: 100%;
+padding: 3rem 0;
+}
+.form-container .form-details form .form-btns{
+width: 40vw;
+margin: 2rem auto;
+}
+.form-container .form-details form .form-btns .donate-btns{
+display: flex;
+justify-content: center;
+height: 3rem;
+}
+.form-details form .form-btns .donate-btns .btn {
+    width: 35rem;
+    border: 1px solid #F3628E;
+    cursor: pointer;
+}
+.form-details form .form-btns .donate-btns .one-time {
+    background-color: #F3628E;
+}
+.form-details form .form-btns .donate-btns .monthly {
+    color: #F3628E;
+}
+.form-container .form-details form .money-btns {
+    width: 40vw;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1rem;
+    }
+    .form-details form .money-btns .btn {
+        width: 10.5rem;
+        height: 3rem;
+        border-radius: 3px;
+        background-color: transparent;
+        border: 1px solid #F3628E;
+        cursor: pointer;
+    }
+    .form-details form .money-btns .btn a{
+       font-size: 1.2rem;
+        color:  #F3628E;
+    }
+    .form-container .form-details form input {
+        width: 100%;
+        height: 3rem;
+        background-color: transparent;
+        border: 1px solid #F3628E;
+        padding: 1rem;
+    }
+    .form-container .form-details form input::placeholder {
+        color: #F3628E;
+        font-size: 1rem;
+    }
+    .form-container .form-details form input {
+        width: 100%;
+        height: 3rem;
+        background-color: transparent;
+        border: 1px solid #F3628E;
+        padding: 1rem;
+    }
+    .form-container .form-details form .btn-donate-now {
+        width: 100%;
+        height: 3rem;
+        background-color:#F3628E;
+        border: 1px solid #F3628E;
+        margin-top: 2rem;
+    }
+    .form-details form .btn-donate-now  a {
+        color: aliceblue;
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
+    }
+/* .form-container .form-details .btn {
+    background-color: #F3628E;
+border: 1px solid #F3628E;
 padding: .8rem 2rem;
 border-radius: 5px;
- }
- .contact-img .contact-img-btn .btn a {
-color: #fff;
- }
+display: flex;
+justify-content: center;
+margin-left: 40%;
+} */
+.form-container .form-details .btn a {
+    color: #fff;
+}
 
- .contact-numbers-container {
+
+.contact-numbers-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -268,16 +256,7 @@ color: #fff;
    padding-bottom: 1rem;
    font-size: 15px;
  }
-.girls-education-programmes {
-    width: 70vw;
-    margin: 0 auto;
-}
-.girls-education-programmes h1 {
-   margin-bottom: 1.5rem;
-}
-.girls-education-programmes p ul  {
-   width: 60vw;
-}
+
  @media (max-width:1000px) {
     .logo img {
         font-size: 2.3;
@@ -324,12 +303,8 @@ color: #fff;
         width: 105.10px; 
         height: 34.10px; padding: 11px 14px;
     }
-    .about-img h1 {
-        font-size: 2.7rem;
-    }
-    .programmes .programmes-details {
-        width: 27rem;
-    }
+ 
+    
 }
 
 @media (max-width:768px) {
@@ -348,12 +323,18 @@ color: #fff;
     .navbar-list-container .nav-btns .donate-btn a{
         font-size: .8rem;
     }
-    .about-img h1 {
-        font-size: 2.5rem;
-    }
-/* .contact-numbers-container p {
-    font-size: 13px;
-} */
+    .form-container .form-details form .form-info input{
+        height: 2rem;
+       }
+       
+        /* .form-container .form-details .btn {
+        margin-left: 30%;
+        } */
+        
+        .form-details form .money-btns .btn {
+            width: 6rem;
+        }
+
 .contact-img .contact-img-btn .btn {
     padding: .5rem 1.3rem;
     border-radius: 5px;
@@ -388,48 +369,65 @@ color: #fff;
      .about-img h1 {
          font-size: 2.0rem;
      }
-    
+     .category .category-details .category-details-info {
+        width: 20rem;
+    }
+    .category .category-details .category-details-info img{
+        width: 100%;
+    }
+.form-container .form-details p {
+font-size: .8rem;
+}
  }
  @media (max-width:400px) {
-     .navbar {
-         width: 85vw;
-         /* background-color: #F3628E; */
-        }
-     .logo img {
-         width: 2.2rem;
-     }
-     .navbar-list-container .nav-btns .donate-btn, 
-     .navbar-list-container .nav-btns .contact-btn  {
-         width: 73.10px;
-          height: 21.10px;  padding: 6px 8px;
-          /* margin-right: 2%; */
-     }
-     .navbar-list-container .nav-btns .contact-btn a,
-     .navbar-list-container .nav-btns .donate-btn a{
-         font-size: .7rem;
-     }
-     .about-img h1 {
-         font-size: 1.5rem;
-     }
-     .programmes .programmes-details {
+    .navbar {
+        width: 85vw;
+        /* background-color: #F3628E; */
+       }
+    .logo img {
+        width: 2.2rem;
+    }
+    .navbar-list-container .nav-btns .donate-btn, 
+    .navbar-list-container .nav-btns .contact-btn  {
+        width: 73.10px;
+         height: 21.10px;  padding: 6px 8px;
+         /* margin-right: 2%; */
+    }
+    .navbar-list-container .nav-btns .contact-btn a,
+    .navbar-list-container .nav-btns .donate-btn a{
+        font-size: .7rem;
+    }
+    .about-img h1 {
+        font-size: 1.5rem;
+    }
+   
+    .category .category-details .category-details-info {
         width: 18rem;
     }
-     
- }
- @media (max-width:300px) {
-     .logo img {
-         width: 2.0rem;
-     }
-     .navbar-list-container .nav-btns .donate-btn, 
-     .navbar-list-container .nav-btns .contact-btn  {
-         width: 68.10px;
-          height: 19.10px;  padding: 6px 8px;
-     }
-     .navbar-list-container .nav-btns .contact-btn a,
-     .navbar-list-container .nav-btns .donate-btn a{
-         font-size: .7rem;
-     }
-     .programmes .programmes-details {
-        width: 15rem;
+    .category .category-details .category-details-info img{
+        width: 100%;
     }
- }
+}
+@media (max-width:300px) {
+    .logo img {
+        width: 2.0rem;
+    }
+    .navbar-list-container .nav-btns .donate-btn, 
+    .navbar-list-container .nav-btns .contact-btn  {
+        width: 68.10px;
+         height: 19.10px;  padding: 6px 8px;
+    }
+    .navbar-list-container .nav-btns .contact-btn a,
+    .navbar-list-container .nav-btns .donate-btn a{
+        font-size: .7rem;
+    }
+    .programmes .programmes-details {
+       width: 15rem;
+   }
+   .category .category-details .category-details-info {
+    width: 15rem;
+}
+.category .category-details .category-details-info img{
+    width: 100%;
+}
+}

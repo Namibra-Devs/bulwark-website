@@ -87,11 +87,28 @@ gap: 3rem;
     gap: .4rem;
 }
 .navbar-list-container .nav-btns .donate-btn {
+    position: relative;
     width: 115.10px;
      height: 36.10px;  padding: 13px 17px;
      background-color: rgba(243, 98, 142, 1);
      border-radius:5px;
      display: flex;  align-items: center; justify-content: center;
+     z-index: 1;
+     overflow: hidden;
+     cursor: pointer;
+}
+.navbar-list-container .nav-btns .donate-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    width: 00%;height: 100%;
+    background-color: rgb(240, 51, 83);
+    border-radius:5px;
+    z-index: -1;
+    transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.navbar-list-container .nav-btns .donate-btn:hover::before {
+    width: 100%;
 }
 .navbar-list-container .nav-btns .donate-btn a {
     color: aliceblue;
@@ -99,18 +116,34 @@ gap: 3rem;
 }
 
 .navbar-list-container .nav-btns .contact-btn {
+    position: relative;
     background-color: transparent;
     width: 115.10px; 
     height: 36.10px; padding: 13px 17px;
     border-radius: 5px; 
-    border-style: solid; 
-    border-width: 1px;
-     border-style: solid; 
-     border-color: rgba(243, 98, 142, 1);
+    border:1px solid rgba(243, 98, 142, 1); 
     display: flex;  align-items: center; justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+.navbar-list-container .nav-btns .contact-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    width: 00%;height: 100%;
+    border-radius: 5px; 
+    background-color: rgba(243, 98, 142, 1);
+    border-radius:5px;
+    z-index: -1;
+    transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.navbar-list-container .nav-btns .contact-btn:hover::before {
+    width: 100%;
 }
 .navbar-list-container .nav-btns .contact-btn a {
     font-size: 1rem;
+    color: black;
 }
 .toggle {
     display: none;
@@ -214,12 +247,30 @@ width: 60vw;
 margin-bottom: 2rem;
 }
 .sexual-reproductive-health-container .btn
-{
+{   position: relative;
     background-color: #F3628E;
     border: 1px solid #F3628E;
     padding: .5rem 1.2rem;
     border-radius: 5px;
     margin-top: 5px;
+    z-index: 1;
+   overflow: hidden;
+   cursor: pointer;
+    
+}
+.sexual-reproductive-health-container .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    width: 00%;height: 100%;
+    border-radius: 5px; 
+    background-color: rgb(240, 51, 83);
+    border-radius:5px;
+    z-index: -1;
+    transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.sexual-reproductive-health-container .btn:hover::before {
+    width: 100%;
 }
 .sexual-reproductive-health-container .btn a
 {
@@ -250,11 +301,29 @@ text-align: center;
 color: #fff;
  }
  .contact-img .contact-img-btn .btn {
-background-color: transparent;
+position: relative;
+background-color: #F3628E;
 border: 1px solid #fff;
 padding: .8rem 2rem;
 border-radius: 5px;
+z-index: 1;
+overflow: hidden;
+cursor: pointer;
  }
+ .contact-img .contact-img-btn .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    width: 00%;height: 100%;
+    border-radius: 5px; 
+    background-color: rgb(240, 51, 83);
+    border-radius:5px;
+    z-index: -1;
+    transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.contact-img .contact-img-btn .btn:hover::before {
+    width: 100%;
+}
  .contact-img .contact-img-btn .btn a {
 color: #fff;
  }
@@ -473,3 +542,5 @@ color: #fff;
     width: 100%;
 }
 }
+
+
