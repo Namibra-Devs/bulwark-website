@@ -278,6 +278,22 @@ color: #fff;
 .girls-education-programmes p ul  {
    width: 60vw;
 }
+@media (max-width:1200px) {
+    .navbar-list-container .navbar-list {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    .navbar-list-container .navbar-list li a{
+       font-size: .9rem;
+    }
+    .navbar-list-container .navbar-list li {
+       margin-right: -.9rem;
+    }
+    .navbar-list-container .nav-search {
+        width: 150px; height: 35px; 
+    }
+}
  @media (max-width:1000px) {
     .logo img {
         font-size: 2.3;
