@@ -5,14 +5,13 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
-    /* list-style: none; */
+    list-style: none;
     text-decoration: none;
     border: none;
     outline: none;
 }
-
-body {
-    padding-bottom: 2rem;
+html {
+    overflow-x: auto;
 }
 .logo img {
     margin-right: 1rem;
@@ -45,9 +44,6 @@ gap: 3rem;
     display: flex;
     gap: 2.5rem;
     align-items: center;
-}
-.navbar-list-container .navbar-list li {
-    list-style: none;
 }
 .navbar-list-container .navbar-list li a:hover{
     color: #F3628E;
@@ -115,119 +111,142 @@ gap: 3rem;
 .toggle {
     display: none;
 }
-.form-container {
-    margin: 0 auto;
-    width: 80vw;
-    padding-top: 2rem;
-    /* position: relative; */
-    padding-bottom: 2rem;
+
+/* =============================ABOUT US============================= */
+.about {
+    padding-bottom: 3rem;
 }
-.form-group {
+.about-img {
+    background: url(../images/involve1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.form-group .form-contact {
-    background-color: #F3628E;
-    padding: 1.5rem;
-    width: 22vw;
-    height: 60vh;
-    margin-right: -2.5rem;
-    z-index: 999;
-}
-.form-group .form-contact h2{
-    text-align: center;
-    margin-bottom: 2rem;
+.about-img h1 {
     color: #fff;
+    font-size: 3rem;
 }
-.form-group .form-contact .contact-socials {
-   display: flex;
-   flex-flow: column;
-   gap: 2.2rem;
+.about-details {
+    width: 70vw;
+    margin: 2rem auto;
 }
-.form-group .form-contact .contact-socials a {
- color: #fff;
+.about-details p {
+    font-size: 1.1rem;
+    text-align: justify;
 }
-.form-group .form-contact .contact-socials a i {
-padding-right: 1rem;
+
+/* ========================ACCORDION STYLES==================== */
+.questions {
+    width: 70vw;
+    margin: 0 auto;
 }
-.form-get-in-touch {
-    background-color: rgba(243, 183, 196, 0.829);
-    padding: 2rem 0 2rem 5rem;
-    height: 77vh;
-    width: 35vw;
+.questions .title{
+   margin:2rem 0 ;
 }
-.form-get-in-touch h1 {
-    text-align: left;
-    color: #fff;
-    margin-bottom: 1.5rem;
+.questions .title h2{
+   margin-bottom:1rem;
 }
-.form-get-in-touch form{
-    display: flex;
-    flex-flow: column;
+.section-center .question {
+background-color: #EBA3B3;
+width: 70vw;
+padding: 1rem;
+border-radius: 10px;
+box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.418);
+margin-bottom: 1.5rem;
 }
-.form-get-in-touch form input,
-.form-get-in-touch form textarea {
+.section-center .question .question-title {
+padding-bottom: 1rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.section-center .question .question-text {
+    margin-top: 1rem;
+border-top: 1px solid gray;
+padding-top: 1rem;
+}
+.question-btn {
+    font-size: 1.5rem;
     background-color: transparent;
-    margin-bottom: 2rem;
-    border: 1px solid #F3628E;
-    width: 22vw;
-    padding: 1rem;
+    border-color: transparent;
+    cursor: pointer;
+    /* color: #F3628E; */
 }
-.form-get-in-touch form input::placeholder,
-.form-get-in-touch form textarea::placeholder {
-   color:#F3628E;
+.question-btn:hover {
+    transform: rotate(180deg);
 }
-.form-get-in-touch form input {
-    height: 3rem;
+.question-text {
+    display: none;
 }
-.form-get-in-touch form textarea {
-    height: 10vw;
+.show-text .question-text {
+    display: block;
 }
-.form-get-in-touch form .btn {
-    padding: 1rem 0;
-    width: 10rem;
-    background-color: #F3628E;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 1rem;
+.minus-icon {
+    display: none;
 }
-
-
-.contact-numbers-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    row-gap: 2rem ;
+.show-text .minus-icon {
+    display: inline;
+}
+.show-text .plus-icon {
+    display: none;
+}
+/* ========================CONTACT-CONTAINER STYLES==================== */
+ .contact-container {
     width: 80vw;
+    margin: 3rem auto;
  }
- .social-icons {
-    display: flex;gap: 1rem;
- }
- .footer-1 {
+ .contact-img {
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-    width: 80vw;
-    margin-top: 2rem;
- }
- .footer-2 {
-    margin: 4rem auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-flow: column;
+    background: url(../images/contact-frame.jpg);
+    height: 40vh;
+    /* min-height: 10rem; */
     width: 70vw;
  }
- .footer-2 p {
-   text-align: center;
-   padding-bottom: 1rem;
-   font-size: 15px;
+ .contact-img .contact-img-text h1 {
+text-align: center;
+color: #fff;
+padding-bottom: 2rem;
  }
-@media (max-width:1200px) {
+ .contact-img .contact-img-text p {
+text-align: center;
+color: #fff;
+ }
+ .contact-img .contact-img-btn {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+ }
+ .contact-img .contact-img-btn input{
+    background-color: #EBA3B3;
+    width: 10rem;
+    /* height: 3rem; */
+    padding: .8rem 2rem;
+ }
+ .contact-img .contact-img-btn input::placeholder {
+   color: #fff;
+ }
+ .contact-img .contact-img-btn .btn {
+background-color: #FF9CBD;
+/* border: 1px solid #fff; */
+padding: .8rem 2rem;
+border-radius: 5px;
+ }
+ .contact-img .contact-img-btn .btn a {
+color: #fff;
+ }
+
+
+ @media (max-width:1200px) {
     .navbar-list-container .navbar-list {
         display: flex;
         gap: 1.5rem;
@@ -243,7 +262,7 @@ padding-right: 1rem;
         width: 150px; height: 35px; 
     }
 }
- @media (max-width:1000px) {
+@media (max-width:1000px) {
     .logo img {
         font-size: 2.3;
     }
@@ -289,18 +308,9 @@ padding-right: 1rem;
         width: 105.10px; 
         height: 34.10px; padding: 11px 14px;
     }
- 
-    .form-group .form-contact .contact-socials a {
-        color: #fff;
-        font-size: .8rem;
-       }
-       .form-group .form-contact {
-        padding: 1.0rem;
-        width: 30vw;
-        margin-right: -2.0rem;
-    }
-}
 
+  
+}
 @media (max-width:768px) {
     .logo img {
         width: 2.5rem;
@@ -317,120 +327,40 @@ padding-right: 1rem;
     .navbar-list-container .nav-btns .donate-btn a{
         font-size: .8rem;
     }
-    .form-group .form-contact {
-        padding: 1.0rem;
-        width: 30vw;
-        margin-right: -2.0rem;
-    }
-    .form-group .form-contact h2{
-       font-size: 1.2rem;
-    }
-    .form-group .form-contact .contact-socials a {
-        color: #fff;
-        font-size: .6rem;
+    .question-title p {
+        width: 50vw;
        }
-    .form-group .form-contact .contact-socials a i {
-        padding-right: 3px;
-        }
-    .form-get-in-touch {
-        background-color: rgba(243, 183, 196, 0.829);
-        padding: 2rem 0 2rem 3.3rem;
-        height: 77vh;
-        width: 45vw;
-    }
-    .form-get-in-touch h1 {
-       font-size: 1.5rem;
-    }
-    .form-get-in-touch form input,
-    .form-get-in-touch form textarea {
-        width: 27vw;
-    }
-    
-    .form-get-in-touch form input {
-        height: 1.5rem;
-    }
-    .form-get-in-touch form textarea {
-        height: 20vw;
-    }
-    .form-get-in-touch form .btn {
-        padding: .7rem 0;
-        width: 5rem;
-        font-size: .8rem;
-    }
-.contact-img .contact-img-btn .btn {
-    padding: .5rem 1.3rem;
-    border-radius: 5px;
-     }
-.footer-2 p {
-        padding-bottom: 1rem;
-        font-size: 13px;
-      }
- .footer-1 .logo p {
-        font-size: 13px;
-      }
-      .programmes .programmes-details {
-        width: 23rem;
-    }
+    .contact-img .contact-img-text h1 {
+        font-size: 1.2rem;
+         }
+    .contact-img .contact-img-btn input{
+            width: 9rem;
+            padding: .6rem 1.7rem;
+         }
+     .contact-img .contact-img-btn .btn {
+        padding: .6rem 1.7rem;
+            border-radius: 5px;
+             }
+
 }
 @media (max-width:600px) {
-    .navbar {
-     width: 80vw;
+   .navbar {
+    width: 80vw;
+   }
+    .logo img {
+        width: 2.4rem;
     }
-     .logo img {
-         width: 2.4rem;
-     }
-     .navbar-list-container .nav-btns .donate-btn, 
-     .navbar-list-container .nav-btns .contact-btn  {
-         width: 80.10px;
-          height: 24.10px;  padding: 7px 9px;
-     }
-     .navbar-list-container .nav-btns .contact-btn a,
-     .navbar-list-container .nav-btns .donate-btn a{
-         font-size: .8rem;
-     }
-     .form-group .form-contact {
-        padding: 1.0rem;
-        width: 32vw;
-        height: 40vh;
-        margin-right: -2.0rem;
+    .navbar-list-container .nav-btns .donate-btn, 
+    .navbar-list-container .nav-btns .contact-btn  {
+        width: 80.10px;
+         height: 24.10px;  padding: 7px 9px;
     }
-    .form-group .form-contact h2{
-       font-size: .8rem;
-    }
-    .form-group .form-contact .contact-socials a {
-        color: #fff;
-        font-size: .6rem;
-       }
-    .form-group .form-contact .contact-socials a i {
-        padding-right: 3px;
-        }
-    .form-get-in-touch {
-        background-color: rgba(243, 183, 196, 0.829);
-        padding: 2rem 0 2rem 3.3rem;
-        height: 70vh;
-        width: 50vw;
-    }
-    .form-get-in-touch h1 {
-       font-size: .8rem;
-    }
-    .form-get-in-touch form input,
-    .form-get-in-touch form textarea {
-        width: 30vw;
-    }
-    
-    .form-get-in-touch form input {
-        height: 1.2rem;
-    }
-    .form-get-in-touch form textarea {
-        height: 27vw;
-    }
-    .form-get-in-touch form .btn {
-        padding: .7rem 0;
-        width: 5rem;
+    .navbar-list-container .nav-btns .contact-btn a,
+    .navbar-list-container .nav-btns .donate-btn a{
         font-size: .8rem;
     }
- }
- @media (max-width:400px) {
+}
+@media (max-width:400px) {
     .navbar {
         width: 85vw;
         /* background-color: #F3628E; */
@@ -451,13 +381,24 @@ padding-right: 1rem;
     .about-img h1 {
         font-size: 1.5rem;
     }
-   
-    .category .category-details .category-details-info {
-        width: 18rem;
+    .mission-vision-container .mission-vision {
+        width: 17rem;
     }
-    .category .category-details .category-details-info img{
-        width: 100%;
+    .mission-vision-container .mission-vision p {
+       width: 100%;
     }
+    .what-we-do .title,
+.team-container .title {
+    margin: 0 auto;
+    width: 300px; height: 66px; 
+    display: flex; flex-direction: column; 
+    align-items: center; justify-content: center;
+}
+    
+.what-we-do .title img,
+.team-container .title img {
+    width: 7rem;
+}
 }
 @media (max-width:300px) {
     .logo img {
@@ -472,13 +413,7 @@ padding-right: 1rem;
     .navbar-list-container .nav-btns .donate-btn a{
         font-size: .7rem;
     }
-    .programmes .programmes-details {
-       width: 15rem;
+   .contact-numbers p {
+font-size: .7rem;
    }
-   .category .category-details .category-details-info {
-    width: 15rem;
-}
-.category .category-details .category-details-info img{
-    width: 100%;
-}
 }
