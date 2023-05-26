@@ -175,10 +175,11 @@ gap: 3rem;
   font-size: 1.2rem;
 }
 .category {
-    margin: 3rem 0;
+    width: 60vw;
+    margin: 3rem  auto;
 }
 .category h1{
-   margin: 0 0 2rem 17rem;
+   margin-bottom: 1.5rem;
 }
 .category .category-details {
     display: flex;
@@ -186,8 +187,6 @@ gap: 3rem;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-    width: 80vw;
-    margin: 0 auto;
 }
 
 .category .category-details .category-details-info {
