@@ -5,24 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>spendysbulwark</title>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <!--=============== GOOGLE FONTS======================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
-     <!-- ===============OWL CAROUSEL ======================== -->
-    <link rel="stylesheet" href="./css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <!-- ===============CSS STYLES ======================== -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- ===============FONT AWESOME======================== -->
     <link rel="stylesheet" href="font-awesome-6/css/all.min.css">
+      <!-- ===============ANIMATION ON SCROLL======================== -->
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <!--======================= HOME SECTION =================-->
-  
+  <section class="home">
         <nav class="navbar">
             <div class="logo">
-                <img src="images/spendy-logo.png" alt="">
+                <a href="home.html"><img src="images/spendy-logo.png" alt=""></a>
             </div>
         
             <div class="navbar-list-container">
@@ -52,26 +52,36 @@
         </nav> 
  
         <div class="home-content-details">
-            <h3>Take Control <span>of</span>  Your <span>Reproductive</span> Health</h3>
-            <p>We provide <span>Education</span>, <span>Resources</span>, and <span>Support</span>
+            <h3 data-aos="fade-left">Take Control <span>of</span>  Your <span>Reproductive</span> Health</h3>
+            <p data-aos="flip-left">We provide <span>Education</span>, <span>Resources</span>, and <span>Support</span>
                  to help women make informed decisions about their Reproductive Health</p>
-            <button class="btn"><a href="getInvolve.html">Get Involve</a></button>
+            <button class="btn" data-aos="fade-right"><a href="getInvolve.html">Get Involve</a></button>
          </div>
-         <div class="homepage-image">
-            <img src="images/v569_749.png" alt="">        
-    
+         <div class="volunteer-wrapper">
+            <div class="container">
+                <span class="number" data-val="1500">000</span>
+                <span class="text">Projects</span>
+            </div>
+            <div class="container">
+                <span class="number" data-val="1200">000</span>
+                <span class="text">Volunteers</span>
+            </div>
+            <div class="container">
+                <span class="number" data-val="800+">000</span>
+                <span class="text">Donations</span>
+            </div>
          </div>
-
+        </section>  
     <section class="about">
-         <div class="title">
+         <div class="title" data-aos="fade-up">
             <h1>Who We Are</h1>
             <img src="images/Vector.jpg" alt="">
          </div>
          <div class="about-details">
-            <div class="about-details-img">
+            <div class="about-details-img" data-aos="zoom-in-up">
                 <img src="images/Mask-group.png" alt="">
             </div>
-            <div class="about-details-content">
+            <div class="about-details-content" data-aos="zoom-in-down">
                 <h1>About Us</h1>
                 <p>
                     Spendy’s Bulwark was formed on the 5th of January, 2022 by Miss Spendilove Konadu; a BSc. Biochemistry student of the University for Development Studies to educate the girl child on the awareness of Reproductive Health Issues both in the university and its surroundings through social media and in-kind face-to-face interactions.
@@ -84,26 +94,26 @@
          </div>
     </section>
     <section class="project">
-        <div class="title">
+        <div class="title" data-aos="flip-down">
             <h1>Our Recent Projects</h1>
             <img src="images/Vector.jpg" alt="">
          </div>
          <div class="project-details">
-            <div class="project-details-info">
+            <div class="project-details-info" data-aos="zoom-in-down">
                 <img src="images/v561_543.png" alt="">
                 <div class="project-details-info-text">
                     <h4>10th May, 2023</h4>
                     <p>Vaginal Yeast Awarenes at Bible Church Academy</p>
                 </div>
             </div>
-            <div class="project-details-info">
+            <div class="project-details-info" data-aos="fade-up">
                 <img src="images/v561_544.png" alt="">
                 <div class="project-details-info-text">
                 <h4>10th May, 2023</h4>
                 <p>Vaginal Yeast Awarenes at Bible Church Academy</p>
             </div>
             </div>
-            <div class="project-details-info">
+            <div class="project-details-info" data-aos="zoom-in-down">
                 <img src="images/v561_545.png" alt="">
                 <div class="project-details-info-text">
                 <h4>10th May, 2023</h4>
@@ -111,7 +121,7 @@
                </div>
             </div>
          </div>
-         <div class="view-more-arrow">
+         <div class="view-more-arrow" data-aos="zoom-in-up">
             <p>View more</p>
             <div class="view-more-arrow-img">
                 <img src="images/Arrow - Right.png" alt="">
@@ -120,12 +130,12 @@
     </section>
 
     <section class="events">
-        <div class="title">
+        <div class="title" data-aos="zoom-out-down">
             <h1>Next Events</h1>
             <img src="images/Vector.jpg" alt="">
          </div>
          <div class="event-details">
-            <div class="event-details-info">
+            <div class="event-details-info" data-aos="zoom-out-down">
                 <div>
                     <p><span>May 9 – 14, 2023</span><br/>10:00 am – 8:00 pm</p>
                 </div>
@@ -136,7 +146,7 @@
                     <i class="fa fa-location-dot"></i><p>No 7 James Oni Street,<br/>Lagos ,Nigeria</p>
                 </div>
             </div>
-            <div class="event-details-info">
+            <div class="event-details-info" data-aos="zoom-out-up">
                 <div>
                     <p><span>May 9 – 14, 2023</span> <br/>10:00 am – 8:00 pm</p>
                 </div>
@@ -147,7 +157,7 @@
                     <i class="fa fa-location-dot"></i><p> No 7 James Oni Street,<br/>Lagos ,Nigeria</p>
                 </div>
             </div>
-            <div class="event-details-info">
+            <div class="event-details-info" data-aos="zoom-out-down">
                 <div>
                     <p><span>May 9 – 14, 2023</span><br/>10:00 am – 8:00 pm</p>
                 </div>
@@ -158,18 +168,19 @@
                     <i class="fa fa-location-dot"></i> <p>No 7 James Oni Street,<br/>Lagos ,Nigeria</p>
                 </div>
             </div>
-            <div class="event-btn">
+            <div class="event-btn" data-aos="zoom-out-up">
                 <button class="btn"><a href="#">View More</a></button>
             </div>
          </div>
     </section>
     <section class="testimonials">
-        <div class="title">
+        <div class="title" data-aos="flip-down">
             <h1>Testimonials</h1>
             <img src="images/Vector.jpg" alt="">
          </div>
-        <div class="testimonial-details owl-theme owl-carousel">
-            <div class="testimonials-details-info">
+       
+        <div class="testimonial-details swiper-wrapper">
+            <div class="testimonials-details-info swiper-slide">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit id tempore!</p>
                 <div class="testimonials-img">
                     <img src="images/testimonial-1.png" alt="">
@@ -179,7 +190,7 @@
                     </div>
                 </div>
              </div>
-             <div class="testimonials-details-info">
+             <div class="testimonials-details-info swiper-slide">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit id tempore!</p>
                 <div class="testimonials-img">
                     <img src="images/testimonial-2.png" alt="">
@@ -189,7 +200,7 @@
                     </div>
                 </div>
              </div>
-             <div class="testimonials-details-info">
+             <div class="testimonials-details-info swiper-slide">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit id tempore!</p>
                 <div class="testimonials-img">
                     <img src="images/testimonial-3.png" alt="">
@@ -200,15 +211,16 @@
                 </div>
              </div>
         </div>
+       
         
     </section>
   <section class="blog">
-    <div class="title">
+    <div class="title" data-aos="zoom-out-down">
         <h1>Our Blog</h1>
         <p>Latest Article</p>
     </div>
     <div class="blog-content">
-        <div class="blog-content-details">
+        <div class="blog-content-details"data-aos="zoom-in-down">>
             <img src="images/v568_558.png" alt="">
             <div class="blog-content-info">
                 <h4>May 16, 2023</h4>
@@ -220,7 +232,7 @@
                 </div>
             </div>
         </div>
-        <div class="blog-content-details">
+        <div class="blog-content-details" data-aos="zoom-in-up">
             <img src="images/v568_558.png" alt="">
             <div class="blog-content-info">
                 <h4>May 16, 2023</h4>
@@ -232,7 +244,7 @@
                 </div>
             </div>
         </div>
-        <div class="blog-content-details">
+        <div class="blog-content-details"  data-aos="zoom-in-down">
             <img src="images/v568_558.png" alt="">
             <div class="blog-content-info">
                 <h4>May 16, 2023</h4>
@@ -249,17 +261,21 @@
         <p>Read more <i class="fa fa-arrow-right"></i></p>
     </div>
   </section>
-  <section class="contact">
+  <section class="contact" data-aos="zoom-in-down">
  <img src="images/contact-frame.jpg" alt="">
  <div class="contact-info">
     <h1>Get in Touch</h1>
     <p>We'd love to hear from you</p>
-    <button class="btn"><a href="#">Contact Us</a></button>
+    <button class="btn"><a href="contact.html">Contact Us</a></button>
  </div>
   </section>
   <!--=======================END OF HOME SECTION =================-->
-  <script src="./js/jquery.min.js"></script>
-  <script src="./js/owl.carousel.min.js"></script>
+
+
+ <!-- <script src="./js/swiper-bundle.min.js"></script> -->
+ <!-- ================ANIMATION ON SCROLL========================= -->
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <!-- ================JAVASCRIPT JS========================= -->
 <script src="./js/style.js"></script>
 </body>
 </html>

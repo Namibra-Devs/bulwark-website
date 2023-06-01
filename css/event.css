@@ -175,11 +175,13 @@ gap: 3rem;
   font-size: 1.2rem;
 }
 .category {
-    width: 60vw;
+    width: 80vw;
     margin: 3rem  auto;
 }
 .category h1{
-   margin-bottom: 1.5rem;
+    width: 65vw;
+   /* margin-bottom: 1.5rem; */
+   margin: 1.5rem auto;
 }
 .category .category-details {
     display: flex;

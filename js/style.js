@@ -1,3 +1,4 @@
+// =========================NAVBAR TOGGLE=========================
 const toggleBtn = document.querySelector(".toggle .fa-bars"),
       navList = document.querySelector(".navbar-list");
 
@@ -14,14 +15,8 @@ toggleBtn.addEventListener("click", (e) => {
         navList.classList.remove("navbar-list-show");
     }
 })
-// const btns = document.querySelectorAll(".question-btn"); 
-// btns.forEach((btn) => {
-//  btn.addEventListener("click", (e) => {
-//   const question = e.currentTarget.parentElement.parentElement;
-//   question.classList.toggle('show-text')
-//  })
-// })
 
+// =========================ACORDION=========================
 const questions= document.querySelectorAll(".question"); 
 
 questions.forEach((question) => {
@@ -37,8 +32,25 @@ const btn= question.querySelector(".question-btn");
 
      });
      });
+// =========================PROJECT, DONATION AND VOLUNTEER COUNTUP=========================
+  const valueDisplays = document.querySelectorAll(".number"); 
+     let interval = 5000; 
+     
+     valueDisplays.forEach((valueDisplay) => {
+         let startValue = 0;
+         let endValue = parseInt(valueDisplay.getAttribute("data-val")); 
+         let duration = Math.floor(interval / endValue); 
+         let counter = setInterval(() => {
+             startValue += 1;
+             valueDisplay.textContent = startValue; 
+             if(startValue == endValue) {
+                 clearInterval(counter); 
+             }
+         }, duration)
+     
+     });
 
-    
+// =========================ANIMATION ON SCROLL=========================
 AOS.init({
     offSet:400,
     duration:1000
