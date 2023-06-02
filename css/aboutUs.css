@@ -274,6 +274,13 @@ gap: 3rem;
   width: 80vw;
   margin: 0 auto;
 }
+.team-description {
+    width: 60vw;
+    margin: 2rem auto;
+}
+.team-description p {
+  text-align: center;
+}
 .team-members {
     display: flex;
     justify-content: center;
