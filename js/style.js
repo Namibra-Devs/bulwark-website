@@ -16,6 +16,20 @@ toggleBtn.addEventListener("click", (e) => {
     }
 })
 
+const topLink = document.querySelector(".top-link");
+window.addEventListener("scroll", () => {
+    const scrollHeight = window.pageYOffset;
+    if(scrollHeight > 400) {
+      topLink.classList.add('show-link');
+    } else {
+    topLink.classList.remove('show-link');
+    }
+    if(scrollHeight > 0) {
+        navList.classList.remove("navbar-list-show");
+        toggleBtn.classList.replace('fa-times', 'fa-bars');
+    } 
+});
+
 // =========================ACORDION=========================
 const questions= document.querySelectorAll(".question"); 
 

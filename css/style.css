@@ -12,6 +12,9 @@
     outline: none;
 /* overflow-x: hidden; */
 }
+html {
+    scroll-behavior: smooth;
+}
 /* ===========================NAVBAR STYLING=============================== */
 .home {
     background: url(../images/homepage-img.jpg);
@@ -238,21 +241,39 @@ font-size: 2rem;
     min-width:15rem ;
     border-top-left-radius: 141px;
 }
-/* .project-volunteer-donation {
-     z-index: 99;
-     display: flex;
-     position: absolute;
+.top-link{
+font-size: 1.25rem;
+position: fixed;
+bottom: 3rem;
+right: 2rem;
+background-color: #F3628E;
+width: 2rem;height: 2rem;
+display: grid;
+place-items: center;
+border-radius: 5px;
+animation: bounce 2s ease-in-out infinite;
+visibility: hidden;
+z-index: -100;
 }
-.project-volunteer-donation .projects {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+
+.top-link i {
+    color: #FFF;
 }
-.project-volunteer-donation .projects P, .project-volunteer-donation .projects h2{
-   color: #000;
-   font-size: 1.6rem;
-} */
+.show-link {
+    visibility: visible;
+    z-index: 100;
+}
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 .about {
     margin: 6rem 0;
@@ -464,7 +485,7 @@ margin-bottom: 1rem;
     justify-content: flex-end;
     padding-top: 0.7rem;
 }
-.blog-content-details .blog-content-info .readmore p {
+.blog-content-details .blog-content-info .readmore a {
     color: #F3628E;
 }
 .blog .blog-content .blog-content-details .blog-content-info .heading-bold {
@@ -477,7 +498,7 @@ margin-bottom: 1rem;
     padding-top: 2rem;
     padding-right: 15%;
 }
-.blog .viewmore p {
+.blog .viewmore a {
     color: #F3628E;
 }
 .contact {
@@ -492,8 +513,8 @@ margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80vw;
-    height: 20rem;
+    width: 65vw;
+    height: 18rem;
 }
 .contact .contact-info {
     position: absolute;
@@ -516,8 +537,11 @@ margin-bottom: 1rem;
     border-radius: 9.01px; 
     margin: 1.5rem auto;
     padding: .8rem 2rem;
-    margin-left: 4.5rem;
-   
+    margin-left: 4.5rem; 
+}
+.contact .contact-info .btn a {
+    color: #FFF;
+    font-size: 1.1rem;
 }
 
 /* MEDIA QEURIES */

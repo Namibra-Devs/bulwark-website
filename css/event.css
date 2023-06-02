@@ -14,6 +14,9 @@
 body {
     padding-bottom: 2rem;
 }
+html {
+    scroll-behavior: smooth;
+}
 .logo img {
     margin-right: 1rem;
 }
@@ -162,6 +165,39 @@ gap: 3rem;
     color: #fff;
     font-size: 3rem;
 }
+.top-link{
+    font-size: 1.25rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 2rem;
+    background-color: #F3628E;
+    width: 2rem;height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    animation: bounce 2s ease-in-out infinite;
+    visibility: hidden;
+    z-index: -100;
+    }
+    
+    .top-link i {
+        color: #FFF;
+    }
+    .show-link {
+        visibility: visible;
+        z-index: 100;
+    }
+    @keyframes bounce {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.5);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
 .event-text {
     width: 65vw;
     margin: 0 auto;
@@ -483,6 +519,7 @@ color: #fff;
 @media (max-width:600px) {
     .navbar {
      width: 80vw;
+     padding: 19px 3px;
     }
      .logo img {
          width: 2.4rem;
@@ -560,3 +597,19 @@ color: #fff;
 }
 
 
+/* const valueDisplays = document.querySelectorAll(".number"); 
+let interval = 5000; 
+
+valueDisplays.forEach((valueDisplay) => {
+    let startValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute("data-val")); 
+    let duration = Math.floor(interval / endValue); 
+    let counter = setInterval(() => {
+        startValue += 1;
+        valueDisplay.textContent = startValue; 
+        if(startValue == endValue) {
+            clearInterval(counter); 
+        }
+    }, duration)
+
+}); */

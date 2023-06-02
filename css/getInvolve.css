@@ -329,6 +329,9 @@ color: #fff;
     .logo img {
         width: 2.5rem;
     }
+    .navbar {
+        padding: 19px 20px;
+       }
     .navbar-list-container .nav-btns .donate-btn  {
         width: 95.10px;
          height: 30.10px;  padding: 9px 11px;
@@ -360,6 +363,7 @@ color: #fff;
 @media (max-width:600px) {
    .navbar {
     width: 80vw;
+    padding: 19px 3px;
    }
     .logo img {
         width: 2.4rem;

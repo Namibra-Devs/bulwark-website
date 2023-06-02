@@ -334,6 +334,9 @@ padding-right: 1rem;
 }
 
 @media (max-width:768px) {
+    .navbar {
+        padding: 19px 20px;
+       }
     .logo img {
         width: 2.5rem;
     }
@@ -407,7 +410,9 @@ padding-right: 1rem;
 @media (max-width:600px) {
     .navbar {
      width: 80vw;
+     padding: 19px 3px;
     }
+    
      .logo img {
          width: 2.4rem;
      }
