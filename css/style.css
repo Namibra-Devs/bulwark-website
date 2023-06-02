@@ -410,6 +410,24 @@ z-index: -100;
 .event-btn .btn a{
     font-size: 20px; font-weight: 500; line-height: 100%; color: white;
 }
+.testimonial-details {
+    width: 70vw; 
+    position: relative;
+    /* background-color: aqua; */
+}
+.slide-content {
+    width: 65vw;  
+    overflow: hidden;
+    margin: 2.5rem auto;
+}
+.slide-content .card {
+    display: flex;
+    gap: 1.2rem;
+}
+/* .swiper-pagination-bullet {
+    background-color: blue;
+    opacity: 1;
+} */
 /* .testimonial-container {
     max-width: 1120PX;
     width: 100%;

@@ -16,6 +16,7 @@ toggleBtn.addEventListener("click", (e) => {
     }
 })
 
+// =========================SCROLL TO BACK TO TOP LINK=========================
 const topLink = document.querySelector(".top-link");
 window.addEventListener("scroll", () => {
     const scrollHeight = window.pageYOffset;
@@ -24,6 +25,8 @@ window.addEventListener("scroll", () => {
     } else {
     topLink.classList.remove('show-link');
     }
+
+    // scroll to remove side menu
     if(scrollHeight > 0) {
         navList.classList.remove("navbar-list-show");
         toggleBtn.classList.replace('fa-times', 'fa-bars');
@@ -69,3 +72,17 @@ AOS.init({
     offSet:400,
     duration:1000
 });
+
+var swiper = new Swiper(".slide-content", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
