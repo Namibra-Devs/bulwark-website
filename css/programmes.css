@@ -72,23 +72,33 @@ gap: 3rem;
 .navbar-list-container .navbar-list li a:hover{
     color: #F3628E;
 }
-.navbar-list-container .nav-search .fa-search{
-    padding-left: 10px;
-    padding-top: 10px;
-    background-color: rgba(217, 217, 217, 0.48); 
-    height: 100%;
-    border-radius: 10px 0 0 10px;
-    color: #fff;
-  }
-  .navbar-list-container .nav-search input{
-    background-color: rgba(217, 217, 217, 0.48); 
-   padding-left: 5px;
-   width: 100%;
-   height: 100%; border-radius:0 10px 10px 0;
+.navbar-list-container form {
+    background-color: gray;
+    border-radius: 25px;
+    position: relative;
+    width: 14rem;
 }
-.navbar-list-container .nav-search input::placeholder{
-  color: #fff;
-  font-size: 1rem;
+.navbar-list-container form input{
+    width: 100%;
+    height: 100%;
+    background-color: #f7b5c9;
+    border-radius: 25px;
+    font-size: 17px;
+    padding: 5px 25px 5px 15px;
+}
+.navbar-list-container form input::placeholder {
+    color: #FFF;
+}
+.navbar-list-container form button{ 
+position: absolute;
+top: 0;
+right: 0;
+width: 50px;
+height: 100%;
+border-radius: 50%;
+background-color: #f7b5c9;
+color: #FFF;
+cursor: pointer;
 }
 .navbar-list .navbar-list-li ul {
     display: flex;
@@ -347,6 +357,9 @@ color: #fff;
     .navbar-list-container .nav-search {
         width: 150px; height: 35px; 
     }
+    .navbar-list-container form {
+        width: 10rem;
+    }
 }
  @media (max-width:1000px) {
     .logo img {
@@ -400,6 +413,9 @@ color: #fff;
     .programmes .programmes-details {
         width: 27rem;
     }
+    .navbar-list-container form {
+        width: 14rem;
+    }
 }
 
 @media (max-width:768px) {
@@ -409,6 +425,9 @@ color: #fff;
     .navbar {
         padding: 19px 20px;
        }
+       .navbar-list-container form {
+        width: 12rem;
+    }
     .navbar-list-container .nav-btns .donate-btn  {
         width: 95.10px;
          height: 30.10px;  padding: 9px 11px;
@@ -451,6 +470,9 @@ color: #fff;
      .logo img {
          width: 2.4rem;
      }
+     .navbar-list-container form {
+        width: 10rem;
+    }
      .navbar-list-container .nav-btns .donate-btn, 
      .navbar-list-container .nav-btns .contact-btn  {
          width: 80.10px;

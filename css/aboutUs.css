@@ -65,23 +65,33 @@ gap: 3rem;
 .navbar-list-container .navbar-list li a:hover{
     color: #F3628E;
 }
-.navbar-list-container .nav-search .fa-search{
-    padding-left: 10px;
-    padding-top: 10px;
-    background-color: rgba(217, 217, 217, 0.48); 
-    height: 100%;
-    border-radius: 10px 0 0 10px;
-    color: #fff;
-  }
-  .navbar-list-container .nav-search input{
-    background-color: rgba(217, 217, 217, 0.48); 
-   padding-left: 5px;
-   width: 100%;
-   height: 100%; border-radius:0 10px 10px 0;
+.navbar-list-container form {
+    background-color: gray;
+    border-radius: 25px;
+    position: relative;
+    width: 14rem;
 }
-.navbar-list-container .nav-search input::placeholder{
-  color: #fff;
-  font-size: 1rem;
+.navbar-list-container form input{
+    width: 100%;
+    height: 100%;
+    background-color: #f7b5c9;
+    border-radius: 25px;
+    font-size: 17px;
+    padding: 5px 25px 5px 15px;
+}
+.navbar-list-container form input::placeholder {
+    color: #FFF;
+}
+.navbar-list-container form button{ 
+position: absolute;
+top: 0;
+right: 0;
+width: 50px;
+height: 100%;
+border-radius: 50%;
+background-color: #f7b5c9;
+color: #FFF;
+cursor: pointer;
 }
 .navbar-list .navbar-list-li ul {
     display: flex;
@@ -311,9 +321,11 @@ gap: 3rem;
     gap: 1rem;
  }
  .team-members .team-member {
+    position: relative;
     width: 14rem;
     height: 19rem;
-    
+    overflow: hidden;
+    cursor: pointer;
  }
  /* .team-members .team-member p {
    color: #F3628E;
@@ -322,6 +334,28 @@ gap: 3rem;
     width: 100%;
     height: 14rem;
     border-radius: 5px;
+    filter: grayscale(50%);
+ }
+ .team-members .team-member .team-member-img img:hover {
+    filter: grayscale(0%);
+ }
+ .social-handles {
+    position: absolute;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F3628E;
+    padding: 1rem;
+    border-radius: 10px 0 0 10px;
+    transform: translate(0%, -210%);
+    gap: .5rem;
+    transition: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+ }
+ .social-handles i {
+    color: white;
+ }
+ .team-members .team-member:hover .social-handles {
+right: 0;
  }
 
  .contact-container {
@@ -406,6 +440,9 @@ color: #fff;
     .navbar-list-container .nav-search {
         width: 150px; height: 35px; 
     }
+    .navbar-list-container form {
+        width: 10rem;
+    }
 }
 @media (max-width:1000px) {
     .logo img {
@@ -442,6 +479,9 @@ color: #fff;
        color: aliceblue;
        font-size: 1.2rem;
     }
+    .navbar-list-container form {
+        width: 14rem;
+    }
     .toggle {
         display: block;
     }
@@ -460,6 +500,7 @@ color: #fff;
     .team-container {
         padding: 2rem 0;
     }
+
   
 }
 @media (max-width:768px) {
@@ -469,6 +510,9 @@ color: #fff;
     .navbar {
         padding: 19px 20px;
        }
+       .navbar-list-container form {
+        width: 12rem;
+    }
     .navbar-list-container .nav-btns .donate-btn  {
         width: 95.10px;
          height: 30.10px;  padding: 9px 11px;
@@ -524,6 +568,9 @@ color: #fff;
    
     .logo img {
         width: 2.4rem;
+    }
+    .navbar-list-container form {
+        width: 10rem;
     }
     .navbar-list-container .nav-btns .donate-btn, 
     .navbar-list-container .nav-btns .contact-btn  {

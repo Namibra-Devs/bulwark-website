@@ -83,7 +83,7 @@ gap: 3rem;
 .navbar-list-container .navbar-list li a:hover{
     color: #F3628E;
 }
-.navbar-list-container .nav-search .fa-search{
+/* .navbar-list-container .nav-search .fa-search{
     padding-left: 10px;
     padding-top: 10px;
     background-color: rgba(217, 217, 217, 0.48); 
@@ -100,18 +100,40 @@ gap: 3rem;
 .navbar-list-container .nav-search input::placeholder{
   color: #fff;
   font-size: 1rem;
+} */
+.navbar-list-container form {
+    background-color: gray;
+    border-radius: 25px;
+    position: relative;
+    width: 14rem;
+}
+.navbar-list-container form input{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    font-size: 17px;
+    padding: 5px 25px 5px 15px;
+}
+.navbar-list-container form button{ 
+position: absolute;
+top: 0;
+right: 0;
+width: 50px;
+height: 100%;
+border-radius: 50%;
+cursor: pointer;
 }
 .navbar-list .navbar-list-li ul {
     display: flex;
    gap: 1.2rem;
    align-items: center;
 }
-.navbar-list-container .nav-search {
+/* .navbar-list-container .nav-search {
     width: 170px; height: 38px; padding: 10px 84x 9px 16px;
      background-color: rgba(217, 217, 217, 0.48); 
     border-radius: 10px; display: inline-flex; flex-direction: row; 
     align-items: center; justify-content: flex-start;
-}
+} */
 
 .navbar-list-container .nav-btns {
     display: flex;
@@ -594,6 +616,9 @@ margin-bottom: 1rem;
     }
     .navbar-list-container .nav-search {
         width: 150px; height: 35px; 
+    }
+    .navbar-list-container form {
+        width: 10rem;
     }
     .home-content-details {
         width: 70vw;
