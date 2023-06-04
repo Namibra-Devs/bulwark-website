@@ -16,7 +16,24 @@ html {
 .logo img {
     margin-right: 1rem;
 }
-
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    z-index: 999;
+    transition: all .3s ease-in-out;
+}
+.hide-preloader {
+    z-index: -999;
+    visibility: hidden;
+}
 .navbar {
     position: relative;
     width: 90vw;
@@ -271,7 +288,7 @@ gap: 3rem;
    width: 15rem;
 }
 .team-container {
-  width: 80vw;
+  width: 70vw;
   margin: 0 auto;
 }
 .team-description {
@@ -280,8 +297,12 @@ gap: 3rem;
 }
 .team-description p {
   text-align: center;
+  width: 50vw;
+  margin: 0 auto;
 }
 .team-members {
+    width: 60vw;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -291,10 +312,16 @@ gap: 3rem;
  }
  .team-members .team-member {
     width: 14rem;
+    height: 19rem;
+    
  }
+ /* .team-members .team-member p {
+   color: #F3628E;
+ } */
  .team-members .team-member .team-member-img img {
     width: 100%;
     height: 14rem;
+    border-radius: 5px;
  }
 
  .contact-container {

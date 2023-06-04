@@ -16,6 +16,24 @@ html {
 body {
     padding-bottom: 2rem;
 }
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    z-index: 999;
+    transition: all .3s ease-in-out;
+}
+.hide-preloader {
+    z-index: -999;
+    visibility: hidden;
+}
 .logo img {
     margin-right: 1rem;
 }

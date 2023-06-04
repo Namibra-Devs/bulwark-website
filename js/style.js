@@ -1,3 +1,8 @@
+// =========================PRELOADER==========================
+const preloader = document.querySelector(".preloader");
+window.addEventListener("load", () => {
+    preloader.classList.add("hide-preloader");
+});
 // =========================NAVBAR TOGGLE=========================
 const toggleBtn = document.querySelector(".toggle .fa-bars"),
       navList = document.querySelector(".navbar-list");
@@ -73,16 +78,19 @@ AOS.init({
     duration:1000
 });
 
-var swiper = new Swiper(".slide-content", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+const date = document.getElementById("date");
+date.innerHTML = new Date().getFullYear();
+
+// var swiper = new Swiper(".slide-content", {
+//     slidesPerView: 1,
+//     spaceBetween: 30,
+//     loop: true,
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//   });
