@@ -83,24 +83,7 @@ gap: 3rem;
 .navbar-list-container .navbar-list li a:hover{
     color: #F3628E;
 }
-/* .navbar-list-container .nav-search .fa-search{
-    padding-left: 10px;
-    padding-top: 10px;
-    background-color: rgba(217, 217, 217, 0.48); 
-    height: 100%;
-    border-radius: 10px 0 0 10px;
-    color: #fff;
-  }
-  .navbar-list-container .nav-search input{
-    background-color: rgba(217, 217, 217, 0.48); 
-   padding-left: 5px;
-   width: 100%;
-   height: 100%; border-radius:0 10px 10px 0;
-}
-.navbar-list-container .nav-search input::placeholder{
-  color: #fff;
-  font-size: 1rem;
-} */
+
 .navbar-list-container form {
     background-color: gray;
     border-radius: 25px;
@@ -111,17 +94,23 @@ gap: 3rem;
     width: 100%;
     height: 100%;
     border-radius: 25px;
+    background-color: #f7b5c9;
     font-size: 17px;
-    padding: 5px 25px 5px 15px;
+    padding: 8px 25px 8px 15px;
+}
+.navbar-list-container form input::placeholder{
+    color: #FFF;
 }
 .navbar-list-container form button{ 
 position: absolute;
 top: 0;
 right: 0;
 width: 50px;
+background-color: #f7b5c9;
 height: 100%;
 border-radius: 50%;
 cursor: pointer;
+color: #fff;
 }
 .navbar-list .navbar-list-li ul {
     display: flex;
