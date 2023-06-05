@@ -173,11 +173,11 @@ cursor: pointer;
     display: none;
 }
 .about-img {
-    background: url(../images/Resources.png);
+    background:linear-gradient(rgba(0, 0, 0, 0.511), rgba(0, 0, 0, 0.511)), url(../images/spendy-25.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 75vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -297,10 +297,13 @@ margin-bottom: 2rem;
     display: flex;
     align-items: center;
     gap: 1rem;
-  /* margin-top: 2rem;
-  padding-bottom: 2rem; */
     position: absolute;
     right: 0;
+}
+.sexual-reproductive-health-profile img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
 }
 .contact-container {
     width: 80vw;

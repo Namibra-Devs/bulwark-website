@@ -174,11 +174,11 @@ cursor: pointer;
     display: none;
 }
 .about-img {
-    background: url(../images/event1.png);
+    background:linear-gradient(rgba(0, 0, 0, 0.511), rgba(0, 0, 0, 0.511)), url(../images/EVENTS.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 75vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -256,6 +256,7 @@ cursor: pointer;
 }
 .category .category-details .category-details-info img{
     width: 100%;
+    height: 15rem;
 }
 .category .category-details .category-details-info h3 {
   margin: 1rem 0 1.0rem 0;

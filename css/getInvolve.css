@@ -139,11 +139,11 @@ cursor: pointer;
     padding-bottom: 3rem;
 }
 .about-img {
-    background: url(../images/involve1.png);
+    background:linear-gradient(rgba(0, 0, 0, 0.511), rgba(0, 0, 0, 0.511)), url(../images/spendy-26.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 75vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;

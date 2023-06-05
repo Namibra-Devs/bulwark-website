@@ -173,11 +173,11 @@ cursor: pointer;
     padding-bottom: 3rem;
 }
 .about-img {
-    background: url(../images/blog.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.511), rgba(0, 0, 0, 0.511)), url(../images/blog.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 75vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,6 +203,9 @@ cursor: pointer;
 }
 .girls-education-programmes .girls-education-img img{
    height: 5rem;
+   width: 5rem;
+   border-radius: 100%;
+
 }
 .girls-education-programmes-details {
     width: 40vw;
