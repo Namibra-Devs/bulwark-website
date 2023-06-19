@@ -890,7 +890,7 @@ font-size: 2rem;
     font-size: 2rem;
     }
 .category .category-details .category-details-info {
-    width: 22rem;
+    width: 20rem;
 }
 .category .category-details .category-details-info img{
     width: 100%;
@@ -1045,10 +1045,10 @@ font-size: 2rem;
     }
     .events .event-details {
         margin: 3rem auto;
-        width: 70vw;
+        width: 60vw;
     }
     .events .event-details .event-details-info {
-          gap: 2rem;  margin: 3rem auto;
+          gap: 1rem;  margin: 3rem auto;
     }
     
 }
@@ -1130,7 +1130,7 @@ font-size: 2rem;
     }
     .events .event-details {
         margin: 3rem auto;
-        width: 80vw;
+        width: 90vw;
     }
     .events .event-details .event-details-info {
         width: 70vw; height: 50px;
@@ -1264,9 +1264,10 @@ font-size: 2rem;
    }
    .events .event-details {
     justify-content: center;
+    width: 100vw;
    }
    .events .event-details .event-details-info {
-    width: 340px; height: 40px;
+    width: 300px; height: 40px;
      display:flex; flex-direction: row;
       align-items: center; justify-content: center;
       gap: 1.0rem;  margin: 3rem auto;
