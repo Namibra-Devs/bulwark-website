@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,900&display=swap');
+ 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    /* list-style: none; */
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+body {
+    padding-bottom: 2rem;
+}
+.logo img {
+    margin-right: 1rem;
+}
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    z-index: 999;
+    transition: all .3s ease-in-out;
+}
+.hide-preloader {
+    z-index: -999;
+    visibility: hidden;
+}
+
+.navbar {
+    position: relative;
+    width: 90vw;
+    margin: 0 auto;
+     height: 100px; padding: 19px 37px;
+     /* background-color: rgba(0, 0, 0, 0.30);  */
+      display:flex; 
+     align-items: center; 
+     justify-content: space-between;
+}
+.fa-bars, .fa-times {
+    color: #F3628E;
+}
+.navbar-list-container {
+display: flex;
+/* justify-content: space-between; */
+align-items: center;
+gap: 3rem;
+}
+.active {
+    color: #F3628E;
+    text-decoration: underline;
+}
+.navbar-list-container .navbar-list {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+.navbar-list-container .navbar-list li {
+    list-style: none;
+}
+.navbar-list-container .navbar-list li a:hover{
+    color: #F3628E;
+}
+.navbar-list-container form {
+    background-color: gray;
+    border-radius: 25px;
+    position: relative;
+    width: 14rem;
+}
+.navbar-list-container form input{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #f7b5c9;
+    font-size: 17px;
+    padding: 8px 25px 8px 15px;
+}
+.navbar-list-container form input::placeholder {
+    color: #FFF;
+}
+.navbar-list-container form button{ 
+position: absolute;
+top: 0;
+right: 0;
+width: 50px;
+height: 100%;
+border-radius: 50%;
+background-color: #f7b5c9;
+color: #FFF;
+cursor: pointer;
+}
+.navbar-list .navbar-list-li ul {
+    display: flex;
+   gap: 1.2rem;
+   align-items: center;
+}
+
+.navbar-list-container .nav-btns {
+    display: flex;
+    gap: .4rem;
+}
+.navbar-list-container .nav-btns .contact-btn {
+    position: relative;
+    background-color: transparent;
+    width: 115.10px; 
+    height: 36.10px; padding: 13px 17px;
+    border-radius: 5px; 
+    border:1px solid rgba(243, 98, 142, 1); 
+    display: flex;  align-items: center; justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+.navbar-list-container .nav-btns .contact-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    width: 00%;height: 100%;
+    border-radius: 5px; 
+    background-color: rgba(243, 98, 142, 1);
+    border-radius:5px;
+    z-index: -1;
+    transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.navbar-list-container .nav-btns .contact-btn:hover::before {
+    width: 100%;
+}
+.navbar-list-container .nav-btns .contact-btn a {
+    font-size: 1rem;
+}
+
+.navbar-list-container .nav-btns .donate-btn {
+    position: relative;
+    width: 115.10px;
+     height: 36.10px;  padding: 13px 17px;
+     background-color: rgba(243, 98, 142, 1);
+     border-radius:5px;
+     display: flex;  align-items: center; justify-content: center;
+     z-index: 1;
+     overflow: hidden;
+     cursor: pointer;
+}
+.navbar-list-container .nav-btns .donate-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    width: 00%;height: 100%;
+    background-color: rgb(240, 51, 83);
+    border-radius:5px;
+    z-index: -1;
+    transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.navbar-list-container .nav-btns .donate-btn:hover::before {
+    width: 100%;
+}
+.navbar-list-container .nav-btns .donate-btn a {
+    color: aliceblue;
+    font-size: 1rem;
+}
+.toggle {
+    display: none;
+}
+.form-container {
+    margin: 0 auto;
+    width: 80vw;
+    padding-top: 2rem;
+    /* position: relative; */
+    padding-bottom: 2rem;
+}
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-group .form-contact {
+    background-color: #F3628E;
+    padding: 1.5rem;
+    width: 22vw;
+    height: 60vh;
+    margin-right: -2.5rem;
+    z-index: 99;
+}
+.form-group .form-contact h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+.form-group .form-contact .contact-socials {
+   display: flex;
+   flex-flow: column;
+   gap: 2.2rem;
+}
+.form-group .form-contact .contact-socials a {
+ color: #fff;
+}
+.form-group .form-contact .contact-socials a i {
+padding-right: 1rem;
+}
+.form-get-in-touch {
+    background-color: rgba(243, 183, 196, 0.829);
+    padding: 2rem 0 2rem 5rem;
+    height: 77vh;
+    width: 35vw;
+}
+.form-get-in-touch h1 {
+    text-align: left;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+.form-get-in-touch form{
+    display: flex;
+    flex-flow: column;
+}
+.form-get-in-touch form input,
+.form-get-in-touch form textarea {
+    background-color: transparent;
+    margin-bottom: 2rem;
+    border: 1px solid #F3628E;
+    width: 22vw;
+    padding: 1rem;
+}
+.form-get-in-touch form input::placeholder,
+.form-get-in-touch form textarea::placeholder {
+   color:#F3628E;
+}
+.form-get-in-touch form input {
+    height: 3rem;
+}
+.form-get-in-touch form textarea {
+    height: 10vw;
+}
+.form-get-in-touch form .btn {
+    padding: 1rem 0;
+    width: 10rem;
+    background-color: #F3628E;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+
+.contact-numbers-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    row-gap: 2rem ;
+    width: 80vw;
+ }
+ .social-icons {
+    display: flex;gap: 1rem;
+ }
+ .footer-1 {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin-top: 2rem;
+ }
+ .footer-2 {
+    margin: 4rem auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70vw;
+ }
+ .footer-2 p {
+   text-align: center;
+   padding-bottom: 1rem;
+   font-size: 15px;
+ }
+@media (max-width:1200px) {
+    .navbar-list-container .navbar-list {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    .navbar-list-container .navbar-list li a{
+       font-size: .9rem;
+    }
+    .navbar-list-container .navbar-list li {
+       margin-right: -.9rem;
+    }
+    .navbar-list-container form {
+        width: 12rem;
+    }
+}
+ @media (max-width:1000px) {
+    .logo img {
+        font-size: 2.3;
+    }
+    .navbar {
+        width: 75vw;
+    }
+    .logo img {
+        width: 2.8rem;
+    }
+  
+.navbar-list {
+     display:flex;
+     flex-direction: column;
+        position: absolute;
+        top: 100%;
+        background-color: #F3628E;
+        left: -100%;top: 0;
+        height: 100vh;
+        width: 30vw;min-width: 15rem;
+        align-items: center;justify-content: center;
+        transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        z-index: 999;
+    }
+    .navbar-list-show {
+        left: -17%;
+    }
+    .navbar-list-container .navbar-list .navbar-list-li ul {
+        flex-direction: column;
+        gap: 2.3rem;
+    }
+    .navbar-list-container .navbar-list .navbar-list-li ul li a {
+       color: aliceblue;
+       font-size: 1.2rem;
+    }
+    .navbar-list-container form {
+        width: 14rem;
+    }
+    .toggle {
+        display: block;
+    }
+    .navbar-list-container .nav-btns .donate-btn  {
+        width: 100.10px;
+         height: 34.10px;  padding: 11px 14px;
+    }
+    .navbar-list-container .nav-btns .contact-btn {
+        width: 105.10px; 
+        height: 34.10px; padding: 11px 14px;
+    }
+ 
+    .form-group .form-contact .contact-socials a {
+        color: #fff;
+        font-size: .8rem;
+       }
+       .form-group .form-contact {
+        padding: 1.0rem;
+        width: 30vw;
+        margin-right: -2.0rem;
+    }
+}
+
+@media (max-width:768px) {
+    .navbar {
+        padding: 19px 20px;
+       }
+    .logo img {
+        width: 2.5rem;
+    }
+    .navbar-list-container form {
+        width: 12rem;
+    }
+    .navbar-list-container .nav-btns .donate-btn  {
+        width: 95.10px;
+         height: 30.10px;  padding: 9px 11px;
+    }
+    .navbar-list-container .nav-btns .contact-btn {
+        width: 100.10px;
+         height: 32.10px;  padding: 9px 12px;
+    }
+    .navbar-list-container .nav-btns .contact-btn a,
+    .navbar-list-container .nav-btns .donate-btn a{
+        font-size: .8rem;
+    }
+    .form-group .form-contact {
+        padding: 1.0rem;
+        width: 30vw;
+        margin-right: -2.0rem;
+    }
+    .form-group .form-contact h2{
+       font-size: 1.2rem;
+    }
+    .form-group .form-contact .contact-socials a {
+        color: #fff;
+        font-size: .6rem;
+       }
+    .form-group .form-contact .contact-socials a i {
+        padding-right: 3px;
+        }
+    .form-get-in-touch {
+        background-color: rgba(243, 183, 196, 0.829);
+        padding: 2rem 0 2rem 3.3rem;
+        height: 77vh;
+        width: 45vw;
+    }
+    .form-get-in-touch h1 {
+       font-size: 1.5rem;
+    }
+    .form-get-in-touch form input,
+    .form-get-in-touch form textarea {
+        width: 27vw;
+    }
+    
+    .form-get-in-touch form input {
+        height: 1.5rem;
+    }
+    .form-get-in-touch form textarea {
+        height: 20vw;
+    }
+    .form-get-in-touch form .btn {
+        padding: .7rem 0;
+        width: 5rem;
+        font-size: .8rem;
+    }
+.contact-img .contact-img-btn .btn {
+    padding: .5rem 1.3rem;
+    border-radius: 5px;
+     }
+.footer-2 p {
+        padding-bottom: 1rem;
+        font-size: 13px;
+      }
+ .footer-1 .logo p {
+        font-size: 13px;
+      }
+      .programmes .programmes-details {
+        width: 23rem;
+    }
+}
+@media (max-width:600px) {
+    .navbar {
+     width: 80vw;
+     padding: 19px 3px;
+    }
+    
+     .logo img {
+         width: 2.4rem;
+     }
+     .navbar-list-container form {
+        width: 10rem;
+    }
+     .navbar-list-container .nav-btns .donate-btn, 
+     .navbar-list-container .nav-btns .contact-btn  {
+         width: 80.10px;
+          height: 24.10px;  padding: 7px 9px;
+     }
+     .navbar-list-container .nav-btns .contact-btn a,
+     .navbar-list-container .nav-btns .donate-btn a{
+         font-size: .8rem;
+     }
+     .form-group .form-contact {
+        padding: 1.0rem;
+        width: 32vw;
+        height: 40vh;
+        margin-right: -2.0rem;
+    }
+    .form-group .form-contact h2{
+       font-size: .8rem;
+    }
+    .form-group .form-contact .contact-socials a {
+        color: #fff;
+        font-size: .6rem;
+       }
+    .form-group .form-contact .contact-socials a i {
+        padding-right: 3px;
+        }
+    .form-get-in-touch {
+        background-color: rgba(243, 183, 196, 0.829);
+        padding: 2rem 0 2rem 3.3rem;
+        height: 70vh;
+        width: 50vw;
+    }
+    .form-get-in-touch h1 {
+       font-size: .8rem;
+    }
+    .form-get-in-touch form input,
+    .form-get-in-touch form textarea {
+        width: 30vw;
+    }
+    
+    .form-get-in-touch form input {
+        height: 1.2rem;
+    }
+    .form-get-in-touch form textarea {
+        height: 27vw;
+    }
+    .form-get-in-touch form .btn {
+        padding: .7rem 0;
+        width: 5rem;
+        font-size: .8rem;
+    }
+ }
+ @media (max-width:400px) {
+    .navbar {
+        width: 85vw;
+        /* background-color: #F3628E; */
+       }
+    .logo img {
+        width: 2.2rem;
+    }
+    .navbar-list-container .nav-btns .donate-btn, 
+    .navbar-list-container .nav-btns .contact-btn  {
+        width: 73.10px;
+         height: 21.10px;  padding: 6px 8px;
+         /* margin-right: 2%; */
+    }
+    .navbar-list-container .nav-btns .contact-btn a,
+    .navbar-list-container .nav-btns .donate-btn a{
+        font-size: .7rem;
+    }
+    .about-img h1 {
+        font-size: 1.5rem;
+    }
+   
+    .category .category-details .category-details-info {
+        width: 18rem;
+    }
+    .category .category-details .category-details-info img{
+        width: 100%;
+    }
+}
+@media (max-width:300px) {
+    .logo img {
+        width: 2.0rem;
+    }
+    .navbar-list-container .nav-btns .donate-btn, 
+    .navbar-list-container .nav-btns .contact-btn  {
+        width: 68.10px;
+         height: 19.10px;  padding: 6px 8px;
+    }
+    .navbar-list-container .nav-btns .contact-btn a,
+    .navbar-list-container .nav-btns .donate-btn a{
+        font-size: .7rem;
+    }
+    .programmes .programmes-details {
+       width: 15rem;
+   }
+   .category .category-details .category-details-info {
+    width: 15rem;
+}
+.category .category-details .category-details-info img{
+    width: 100%;
+}
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spendy Bulwar</title>
+  <!--=============== GOOGLE FONTS======================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet" />
+  <!-- ===============OWL CAROUSEL ======================== -->
+  <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+  <!-- ===============CSS STYLES ======================== -->
+  <link rel="stylesheet" href="./css/getInvolve.css" />
+  <!-- ===============FONT AWESOME======================== -->
+  <link rel="stylesheet" href="font-awesome-6/css/all.min.css" />
+  <!-- ===============ANIMATION ON SCROLL======================== -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+  <div class="preloader">
+    <img src="images/spinner.gif" alt="" />
+  </div>
+  <!-- ==========================NAVBAR============================ -->
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="home.php"><img src="images/spendy-logo.png" alt="" /></a>
+    </div>
+
+    <div class="navbar-list-container">
+      <div class="navbar-list">
+        <div class="navbar-list-li">
+          <ul>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="aboutUs.php">About Us</a></li>
+            <li><a href="programmes.php">Programme</a></li>
+            <li><a href="blog.php">Blog</a></li>
+            <li><a href="event.php">Events</a></li>
+          </ul>
+        </div>
+        <form action="">
+          <input type="text" placeholder="Search... " />
+          <button type="submit">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+      <div class="nav-btns">
+        <button class="donate-btn"><a href="donate.php">Donate</a></button>
+        <button class="contact-btn">
+          <a href="contact.php">Contact</a>
+        </button>
+      </div>
+    </div>
+
+    <div class="toggle">
+      <i class="fa fa-bars"></i>
+    </div>
+  </nav>
+  <!-- ==========================END OF NAVBAR============================ -->
+
+  <!-- ==========================ABOUT SECTION================================ -->
+
+  <section class="about">
+    <div class="about-img">
+      <h1 data-aos="zoom-out-up">GET INVOLVE</h1>
+    </div>
+    <div class="about-details" data-aos="zoom-in">
+      <p>
+        Thank you for your interest in getting involved with our NGO.
+        Together, we can make a difference in the lives of women and girls.
+        Here are some ways you can contribute:
+      </p>
+    </div>
+    <div class="gallery">
+      <div class="gallery-img" data-aos="flip-right">
+        <img src="images/getInvolve1.png" alt="" />
+      </div>
+      <div class="gallery-img">
+        <img src="images/getinvolve2.png" alt="" data-aos="fade-up" />
+      </div>
+      <div class="gallery-img" data-aos="flip-left">
+        <img src="images/getInvolve3.png" alt="" />
+      </div>
+    </div>
+    <!-- ==========================ACCORDION============================ -->
+    <div class="questions">
+      <div class="title">
+        <h2 data-aos="fade-up">Frequently Asked Questions</h2>
+        <p data-aos="fade-down">
+          Get Answers to Common Questions About This Course
+        </p>
+      </div>
+      <!-- Questions -->
+      <div class="section-center" data-aos="zoom-in">
+        <article class="question">
+          <div class="question-title">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              ?
+            </p>
+            <button type="button" class="question-btn">
+              <span class="plus-icon">
+                <i class="far fa-plus-square"></i>
+              </span>
+              <span class="minus-icon">
+                <i class="far fa-minus-square"></i>
+              </span>
+            </button>
+          </div>
+          <div class="question-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              ab saepe quibusdam velit, impedit magnam blanditiis voluptate ut
+              reprehenderit accusamus? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Debitis ab saepe quibusdam velit, impedit
+              magnam blanditiis voluptate ut reprehenderit accusamus? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Debitis ab
+              saepe quibusdam velit, impedit magnam blanditiis voluptate ut
+              reprehenderit accusamus?
+            </p>
+          </div>
+        </article>
+        <article class="question" data-aos="fade-down">
+          <div class="question-title">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              ?
+            </p>
+            <button type="button" class="question-btn">
+              <span class="plus-icon">
+                <i class="far fa-plus-square"></i>
+              </span>
+              <span class="minus-icon">
+                <i class="far fa-minus-square"></i>
+              </span>
+            </button>
+          </div>
+          <div class="question-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              ab saepe quibusdam velit, impedit magnam blanditiis voluptate ut
+              reprehenderit accusamus? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Debitis ab saepe quibusdam velit, impedit
+              magnam blanditiis voluptate ut reprehenderit accusamus? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Debitis ab
+              saepe quibusdam velit, impedit magnam blanditiis voluptate ut
+              reprehenderit accusamus?
+            </p>
+          </div>
+        </article>
+        <article class="question" data-aos="fade-up">
+          <div class="question-title">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              ?
+            </p>
+            <button type="button" class="question-btn">
+              <span class="plus-icon">
+                <i class="far fa-plus-square"></i>
+              </span>
+              <span class="minus-icon">
+                <i class="far fa-minus-square"></i>
+              </span>
+            </button>
+          </div>
+          <div class="question-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              ab saepe quibusdam velit, impedit magnam blanditiis voluptate ut
+              reprehenderit accusamus? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Debitis ab saepe quibusdam velit, impedit
+              magnam blanditiis voluptate ut reprehenderit accusamus? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Debitis ab
+              saepe quibusdam velit, impedit magnam blanditiis voluptate ut
+              reprehenderit accusamus?
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-img" data-aos="zoom-in">
+        <div class="contact-img-text">
+          <h1>Subscribe to our Newsletter</h1>
+          <p>
+            Our latest news, articles, and blog, we will sent to your
+            inbox weekly.
+          </p>
+        </div>
+        <div class="contact-img-btn">
+          <input type="text" name="" id="" placeholder="Full Name" />
+          <input type="email" name="" id="" placeholder="Email" />
+          <button class="btn"><a href="#">Subscribe</a></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================END OFABOUT SECTION================================ -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="./js/style.js"></script>
+</body>
+
+</html>
