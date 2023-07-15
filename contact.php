@@ -1,3 +1,27 @@
+<?php
+if (isset($_POST['submit'])) {
+  $companyEmail = "spendys98@gmail.com";
+  $subject = "Contact Form Submission from Spendys Bulwark";
+  $contactName = $_POST['name'];
+  $contactEmail = $_POST['email'];
+  $headers = "From: $contactEmail\r\n";
+  $message = $_POST['message'];
+
+  $mailContent = "Contact Details:\n";
+  $mailContent .= "Name: $contactName\n";
+  $mailContent .= "Email: $contactEmail\n\n";
+  $mailContent .= "Message:\n$message";
+
+  // Send email
+  if (mail($companyEmail, $subject, $mailContent, $headers)) {
+    $feedbackmessage = "Thank you for contacting us. Your message has been sent successfully!";
+  } else {
+    $feedbackmessage = "Sorry, there was an error sending your message. Please try again later.";
+  }
+}
+?>
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,11 +97,11 @@
       </div>
       <div class="form-get-in-touch" data-aos="fade-left">
         <h1>Get in Touch</h1>
-        <form action="">
-          <input type="text" name="" id="" placeholder="Your Name" />
-          <input type="email" name="" id="" placeholder="Your Email" />
-          <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-          <button type="submit" class="btn">Send</button>
+        <form action="" method="POST">
+          <input type="text" name="name" id="name" placeholder="Your Name" />
+          <input type="email" name="email" id="email" placeholder="Your Email" />
+          <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+          <button type="submit" name="submit" class="btn">Send</button>
         </form>
       </div>
     </div>

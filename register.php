@@ -1,3 +1,29 @@
+<?php
+require_once "./admin/database/config.php";
+require_once "./auxilliaries.php";
+$sentMessage = "";
+
+if (isset($_POST['submit'])) {
+    $fullname = $_POST['fullname'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+    $organisation = $_POST['organisation'];
+
+    if (!empty($email && $fullname && $phone && $address)) {
+        $volunteer = new Admin($pdo, 'tbl_volunteer');
+        $data = [
+            'email' => $email,
+            'fullname' => $fullname,
+            'phone' => $phone,
+            'address' => $address,
+            'organisation' => $organisation
+        ];
+        $volunteer->create($data);
+        $sentMessage = "Resgistration details sent succesfully";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,32 +84,36 @@
     </nav>
 
     <div class="form-container">
+
         <div class="form-details" data-aos="flip-down">
-            <h2>Registration Form</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            <form action="">
+            <h2>Volunteer Registration Form</h2>
+            <p>Fill this form and we will get back to you as soon as possible</p>
+            <form action="" method="POST">
                 <div class="form-info">
-                    <label for="">Full Name</label>
-                    <input type="text">
+                    <label for="fullname">Full Name*</label>
+                    <input type="text" name="fullname" id="fullname" required>
                 </div>
                 <div class="form-info">
-                    <label for="">Email Address</label>
-                    <input type="email" name="" id="">
+                    <label for="email">Email Address*</label>
+                    <input type="email" name="email" id="email" required>
                 </div>
                 <div class="form-info">
-                    <label for="">Phone number</label>
-                    <input type="tel">
+                    <label for="phone">Phone number*</label>
+                    <input type="tel" name="phone" id="phone" required>
                 </div>
                 <div class="form-info">
-                    <label for="">Home Address</label>
-                    <input type="text">
+                    <label for="address">Home Address*</label>
+                    <input type="text" name="address" id="address" required>
                 </div>
                 <div class="form-info">
-                    <label for="">organization (if applicable)</label>
-                    <input type="text">
+                    <label for="organisation">organization (if applicable)</label>
+                    <input type="text" name="organisation" id="organisation">
                 </div>
+                <button class="btn" type="submit" name="submit">Register</button>
             </form>
-            <button class="btn"><a href="#">Register</a></button>
+            <p style="color:green;">
+                <?php echo $sentMessage ?>
+            </p>
         </div>
     </div>
     <div class="footer-1">

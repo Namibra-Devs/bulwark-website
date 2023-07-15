@@ -32,8 +32,16 @@ class Admin
         $sql = "INSERT INTO " . $this->table . "(" . implode(", ", $fields) . ") VALUES(" . implode(", ", $values) . ")";
         $stmt = $this->conn->prepare($sql);
         // BIND PARAMETERS WITH THE HELP OF $param OBJECTS
+
         foreach ($params as $param => $paramvalue) {
-            echo $stmt->bindParam($param, $paramvalue);
+            $stmt->bindValue($param, $paramvalue);
+        }
+
+        // EXECUTE THE QUERY
+        $result = $stmt->execute();
+        if ($result === false) {
+            $errorInfo = $stmt->errorInfo();
+            echo "Error: " . $errorInfo[2];
         }
     }
     //THE READ FUNCTION WITH A WHERE CLAUSE
@@ -79,7 +87,7 @@ class Admin
         $sql = "UPDATE " . $this->table . " SET " . implode(", ", $fields) . " WHERE id = :id";
         $stmt = $this->conn->prepare($sql);
         foreach ($params as $param => $paramvalue) {
-            echo $stmt->bindParam($param, $paramvalue);
+            $stmt->bindParam($param, $paramvalue);
         }
     }
 };

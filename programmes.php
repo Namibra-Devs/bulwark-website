@@ -195,7 +195,7 @@ $socialWhatsapp = $socialMedia->read("social_name", "WhatsApp");
             <p>We'd love to hear from you</p>
           </div>
           <div class="contact-img-btn">
-            <button class="btn"><a href="#">VOLUNTEER</a></button>
+            <button class="btn"><a href="./register.php">VOLUNTEER</a></button>
           </div>
         </div>
       </div>

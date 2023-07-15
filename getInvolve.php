@@ -1,3 +1,20 @@
+<?php
+require_once "./admin/database/config.php";
+require_once "./auxilliaries.php";
+if (isset($_POST['submit'])) {
+  $firstname = $_POST['firstname'];
+  $email = $_POST['email'];
+
+  if (!empty($email && $firstname)) {
+    $subscribe = new Admin($pdo, 'tbl_subscriber');
+    $data = [
+      'subs_email' => $email,
+      'subs_name' => $firstname
+    ];
+    $subscribe->create($data);
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +22,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spendy Bulwar</title>
+  <title>Spendy Bulwark</title>
   <!--=============== GOOGLE FONTS======================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -194,11 +211,15 @@
             inbox weekly.
           </p>
         </div>
-        <div class="contact-img-btn">
-          <input type="text" name="" id="" placeholder="Full Name" />
-          <input type="email" name="" id="" placeholder="Email" />
-          <button class="btn"><a href="#">Subscribe</a></button>
-        </div>
+        <form action="" method="POST">
+          <div class="contact-img-btn">
+            <input type="text" name="firstname" id="" placeholder="First Name" required />
+            <input type="email" name="email" id="" placeholder="Email" required />
+            <button class="btn" type="submit" name="submit">Subscribe</button>
+          </div>
+        </form>
+
+
       </div>
     </div>
   </section>

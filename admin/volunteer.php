@@ -2,11 +2,9 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View Testimonials</h1>
+		<h1>View volunteers</h1>
 	</div>
-	<div class="content-header-right">
-		<a href="testimonials-add.php" class="btn btn-primary btn-sm">Add Testimonial</a>
-	</div>
+
 </section>
 
 <section class="content">
@@ -18,17 +16,18 @@
 						<thead>
 							<tr>
 								<th>SL</th>
-								<th>Photo</th>
-								<th width="180">Name</th>
-								<th width="180">Position</th>
-								<th width="240">Testimonials</th>
-								<th width="140">Action</th>
+								<th>Full Name</th>
+								<th width="180">Email</th>
+								<th>Phone</th>
+								<th width="200">Home Address</th>
+								<th>Organization</th>
+								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>
 							<?php
 							$i = 0;
-							$statement = $pdo->prepare("SELECT * FROM tbl_testimonials");
+							$statement = $pdo->prepare("SELECT * FROM tbl_volunteer");
 							$statement->execute();
 							$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 							foreach ($result as $row) {
@@ -36,13 +35,13 @@
 							?>
 								<tr>
 									<td><?php echo $i; ?></td>
-									<td style="width:150px;"><img src="../assets/uploads/<?php echo $row['photo']; ?>" alt="<?php echo $row['name']; ?>" style="width:140px;"></td>
-									<td><?php echo $row['name']; ?></td>
-									<td><?php echo $row['position']; ?></td>
-									<td><?php print_r($row['detail']); ?></td>
+									<td><?php echo $row['fullname']; ?></td>
+									<td><?php echo $row['email']; ?></td>
+									<td><?php echo $row['phone']; ?></td>
+									<td><?php echo $row['address']; ?></td>
+									<td><?php echo $row['organisation']; ?></td>
 									<td>
-										<a href="testimonials-edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-xs">Edit</a>
-										<a href="#" class="btn btn-danger btn-xs" data-href="testimonials-delete.php?id=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
+										<a href="#" class="btn btn-danger btn-xs" data-href="volunteer-delete.php?id=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
 									</td>
 								</tr>
 							<?php
